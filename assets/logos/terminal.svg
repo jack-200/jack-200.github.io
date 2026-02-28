@@ -1,0 +1,29 @@
+<svg
+  width="512"
+  height="512"
+  viewBox="0 0 512 512"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Black Background -->
+  <rect width="512" height="512" fill="#020205" />
+  <!-- Matrix Green Border -->
+  <rect
+    x="40"
+    y="40"
+    width="432"
+    height="432"
+    rx="80"
+    stroke="#39ff14"
+    stroke-width="40"
+  />
+  <!-- Cursor Symbol -->
+  <path
+    d="M140 140L260 256L140 372"
+    stroke="#39ff14"
+    stroke-width="45"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <rect x="290" y="340" width="100" height="35" fill="#39ff14" />
+</svg>

@@ -1,0 +1,70 @@
+:root {
+  --bg-base: #020205;
+  --text-main: #00ffcc;
+  --high-contrast-text-muted: #5cc2b9;
+  --accent-neon: #ff00ff;
+  --panel-bg: rgba(6, 15, 25, 0.75);
+  --panel-border: rgba(0, 255, 204, 0.3);
+  --hover-glow: rgba(0, 255, 204, 0.6);
+
+  --color-cyan: #00ffcc;
+  --color-pink: #ff00ff;
+  --color-yellow: #ffeb3b;
+  --color-violet: #bf7af0;
+  --color-orange: #ff9800;
+  --color-green: #39ff14;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Share Tech Mono", monospace;
+}
+
+body {
+  background-color: var(--theme-base-bg, var(--bg-base));
+  transition: background-color 0.8s ease;
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-cyan);
+  outline-offset: 4px;
+}
+
+h1 {
+  font-family: "Fira Code", monospace;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+  text-shadow: 0 0 10px var(--hover-glow);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--high-contrast-text-muted);
+}
+
+.terminal-text {
+  color: var(--text-main);
+  font-size: 1.1rem;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: var(--text-main);
+  animation: blink 1s step-end infinite;
+}

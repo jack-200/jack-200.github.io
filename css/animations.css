@@ -1,0 +1,222 @@
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@keyframes spin-rays {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes float-clouds {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(-45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-120vw, 120vh) rotate(-45deg);
+    opacity: 0;
+  }
+}
+@keyframes fly-saucer {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+    right: -150px;
+    top: 10%;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  40% {
+    transform: translate(-40vw, 15vh) scale(1) rotate(-10deg);
+  }
+  60% {
+    transform: translate(-60vw, -10vh) scale(0.8) rotate(5deg);
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-120vw, 20vh) scale(0.6) rotate(-20deg);
+    opacity: 0;
+    right: 100vw;
+  }
+}
+@keyframes hover-tilt {
+  0% {
+    transform: rotate(-5deg) translateY(-5px);
+  }
+  100% {
+    transform: rotate(5deg) translateY(5px);
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes glitch-anim {
+  0% {
+    clip: rect(21px, 9999px, 83px, 0);
+  }
+  20% {
+    clip: rect(61px, 9999px, 12px, 0);
+  }
+  40% {
+    clip: rect(98px, 9999px, 84px, 0);
+  }
+  60% {
+    clip: rect(81px, 9999px, 66px, 0);
+  }
+  80% {
+    clip: rect(10px, 9999px, 58px, 0);
+  }
+  100% {
+    clip: rect(43px, 9999px, 7px, 0);
+  }
+}
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(51px, 9999px, 32px, 0);
+  }
+  20% {
+    clip: rect(11px, 9999px, 98px, 0);
+  }
+  40% {
+    clip: rect(48px, 9999px, 14px, 0);
+  }
+  60% {
+    clip: rect(31px, 9999px, 46px, 0);
+  }
+  80% {
+    clip: rect(81px, 9999px, 28px, 0);
+  }
+  100% {
+    clip: rect(93px, 9999px, 67px, 0);
+  }
+}
+@keyframes trace-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+  animation: shoot 1.5s linear infinite;
+  z-index: -3;
+  pointer-events: none;
+}
+
+.shooting-star::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.8), transparent);
+  transform: translateY(-50%);
+}
+
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-base);
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--color-pink);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--color-cyan);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim2 2s infinite linear alternate-reverse;
+}
+
+.ufo-container {
+  position: fixed;
+  top: 20%;
+  width: 100px;
+  height: 50px;
+  pointer-events: none;
+  z-index: -2;
+  animation: fly-saucer 25s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(168, 230, 207, 0.6));
+}
+
+.ufo-svg {
+  width: 100%;
+  height: 100%;
+  animation: hover-tilt 3s ease-in-out infinite alternate;
+}
+
+#bouncing-logo-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -3;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
