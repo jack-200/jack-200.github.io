@@ -133,6 +133,11 @@ function hideCelestialBody(celestial) {
 }
 
 export function updatePSTTimeDisplay() {
+  const profilesPanel = document.getElementById("profiles-panel");
+  if (!profilesPanel || !profilesPanel.classList.contains("active-panel")) {
+    return;
+  }
+
   const timeDisplay = document.getElementById("pst-time-display");
   const { hour, minute } = getPSTTime();
 
@@ -177,7 +182,11 @@ function initializeSlider(slider, sliderDisplay) {
 function attachSliderListener(slider, sliderDisplay) {
   slider.addEventListener("input", (event) => {
     startSimulation(event, sliderDisplay);
-    resetSimulationTimer(slider, sliderDisplay);
+
+    clearTimeout(simulationResetTimeout);
+    simulationResetTimeout = setTimeout(() => {
+      resetSimulation();
+    }, 5000);
   });
 }
 
@@ -190,24 +199,33 @@ function startSimulation(event, sliderDisplay) {
   updatePSTTimeDisplay();
 }
 
-function resetSimulationTimer(slider, sliderDisplay) {
-  clearTimeout(simulationResetTimeout);
-  simulationResetTimeout = setTimeout(() => {
-    resetSimulationToRealTime(slider, sliderDisplay);
-  }, 5000);
-}
+export function resetSimulation() {
+  if (simulationResetTimeout) {
+    clearTimeout(simulationResetTimeout);
+    simulationResetTimeout = null;
+  }
 
-function resetSimulationToRealTime(slider, sliderDisplay) {
   isSimulating = false;
-  const { hour } = getPSTTime();
-  slider.value = hour;
-  sliderDisplay.textContent = formatTimeDisplay(hour);
+
+  const slider = document.getElementById("time-slider");
+  const sliderDisplay = document.getElementById("slider-time-display");
+
+  if (slider && sliderDisplay) {
+    const { hour } = getPSTTime();
+    slider.value = hour;
+    sliderDisplay.textContent = formatTimeDisplay(hour);
+  }
 
   applyCurrentTheme();
   updatePSTTimeDisplay();
 }
 
 function applyCurrentTheme() {
+  const profilesPanel = document.getElementById("profiles-panel");
+  if (!profilesPanel || !profilesPanel.classList.contains("active-panel")) {
+    return;
+  }
+
   document.body.className = "";
   document.body.classList.add(getCurrentTimeTheme());
 }

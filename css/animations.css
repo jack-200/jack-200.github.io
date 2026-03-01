@@ -220,3 +220,12 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
+
+@keyframes brand-title-sweep {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}

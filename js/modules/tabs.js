@@ -4,6 +4,7 @@ import {
   formatTimeDisplay,
   getPSTTime,
   isSimulating,
+  resetSimulation,
 } from "./time.js";
 
 export function setupTabSwitching() {
@@ -24,6 +25,10 @@ export function setupTabSwitching() {
   }
 
   function updatePageTheme(targetId) {
+    if (targetId !== "profiles-panel") {
+      resetSimulation();
+    }
+
     document.body.className = "";
     if (targetId === "about-panel") {
       document.body.classList.add("bg-about");

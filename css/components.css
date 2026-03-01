@@ -355,3 +355,22 @@
   margin: 1.5rem 0;
   width: 100%;
 }
+
+.brand-title {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    var(--brand-color-1, var(--color-cyan)) 0%,
+    var(--brand-color-2, var(--color-pink)) 25%,
+    #fff 50%,
+    var(--brand-color-2, var(--color-pink)) 75%,
+    var(--brand-color-1, var(--color-cyan)) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brand-title-sweep 8s linear infinite;
+  text-shadow: none !important;
+}

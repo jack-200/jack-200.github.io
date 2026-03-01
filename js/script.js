@@ -4,6 +4,24 @@ import { setupTimeSimulator, updatePSTTimeDisplay } from "./modules/time.js";
 import { BouncingLogoContainer } from "./modules/bouncer.js";
 import { setupUnreliableImages } from "./modules/analytics.js";
 
+const BOUNCING_LOGO_ICONS = [
+  "assets/icons/github.svg",
+  "assets/icons/linkedin.svg",
+  "assets/icons/leetcode.svg",
+  "assets/icons/codewars.svg",
+  "assets/icons/monkeytype.svg",
+  "assets/icons/python.svg",
+  "assets/icons/java.svg",
+  "assets/icons/lua.svg",
+  "assets/icons/powershell.svg",
+  "assets/icons/js.svg",
+  "assets/icons/ts.svg",
+  "assets/icons/html.svg",
+  "assets/icons/css.svg",
+  "assets/icons/c.svg",
+  "assets/icons/cpp.svg",
+];
+
 document.addEventListener("DOMContentLoaded", () => {
   function initializeUI() {
     setupTabSwitching();
@@ -20,27 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     if (!bouncingLogoContainer) return;
 
-    const bouncingLogoIcons = [
-      "assets/icons/github.svg",
-      "assets/icons/linkedin.svg",
-      "assets/icons/leetcode.svg",
-      "assets/icons/codewars.svg",
-      "assets/icons/monkeytype.svg",
-      "assets/icons/python.svg",
-      "assets/icons/java.svg",
-      "assets/icons/lua.svg",
-      "assets/icons/powershell.svg",
-      "assets/icons/js.svg",
-      "assets/icons/ts.svg",
-      "assets/icons/html.svg",
-      "assets/icons/css.svg",
-      "assets/icons/c.svg",
-      "assets/icons/cpp.svg",
-    ];
-
     window.bouncingLogoInstance = new BouncingLogoContainer(
       bouncingLogoContainer,
-      bouncingLogoIcons,
+      BOUNCING_LOGO_ICONS,
     );
   }
 
