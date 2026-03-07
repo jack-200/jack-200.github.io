@@ -4,49 +4,53 @@ import { setupTimeSimulator, updatePSTTimeDisplay } from "./modules/time.js";
 import { BouncingLogoContainer } from "./modules/bouncer.js";
 import { setupUnreliableImages } from "./modules/analytics.js";
 
-const BOUNCING_LOGO_ICONS = [
-  "assets/icons/github.svg",
-  "assets/icons/linkedin.svg",
-  "assets/icons/leetcode.svg",
-  "assets/icons/codewars.svg",
-  "assets/icons/monkeytype.svg",
-  "assets/icons/python.svg",
-  "assets/icons/java.svg",
-  "assets/icons/lua.svg",
-  "assets/icons/powershell.svg",
-  "assets/icons/js.svg",
-  "assets/icons/ts.svg",
-  "assets/icons/html.svg",
-  "assets/icons/css.svg",
-  "assets/icons/c.svg",
-  "assets/icons/cpp.svg",
-];
-
 document.addEventListener("DOMContentLoaded", () => {
-  function initializeUI() {
+  const BOUNCING_LOGO_CONTAINER_ID = "bouncing-logo-container";
+  const MILLISECONDS_BETWEEN_TIME_UPDATES = 30000;
+
+  function initializeApplication() {
     setupTabSwitching();
     setupShootingStars();
     setupTimeSimulator();
-    initializeBouncingLogos();
-    startPSTTimeUpdateInterval();
+    setupBackgroundSkillAnimation();
+    schedulePSTTimeUpdates();
     setupUnreliableImages();
   }
 
-  function initializeBouncingLogos() {
-    const bouncingLogoContainer = document.getElementById(
-      "bouncing-logo-container",
+  function setupBackgroundSkillAnimation() {
+    const animationContainer = document.getElementById(
+      BOUNCING_LOGO_CONTAINER_ID,
     );
-    if (!bouncingLogoContainer) return;
+    if (!animationContainer) return;
 
-    window.bouncingLogoInstance = new BouncingLogoContainer(
-      bouncingLogoContainer,
-      BOUNCING_LOGO_ICONS,
-    );
+    const skillIconPaths = gatherLocalSkillIconPaths();
+    if (hasNoAvailableIcons(skillIconPaths)) return;
+
+    initializeBouncingIconSystem(animationContainer, skillIconPaths);
   }
 
-  function startPSTTimeUpdateInterval() {
-    setInterval(updatePSTTimeDisplay, 30000);
+  function gatherLocalSkillIconPaths() {
+    return Array.from(document.querySelectorAll(".skills-grid img"))
+      .map((iconElement) => iconElement.src.replace("-shield.svg", "-logo.svg"))
+      .filter(isLocalAssetPath);
   }
 
-  initializeUI();
+  function isLocalAssetPath(sourceUrl) {
+    const LOCAL_ICON_PATH_IDENTIFIER = "/assets/icons/";
+    return sourceUrl.includes(LOCAL_ICON_PATH_IDENTIFIER);
+  }
+
+  function hasNoAvailableIcons(iconPaths) {
+    return iconPaths.length === 0;
+  }
+
+  function initializeBouncingIconSystem(container, icons) {
+    window.bouncingLogoInstance = new BouncingLogoContainer(container, icons);
+  }
+
+  function schedulePSTTimeUpdates() {
+    setInterval(updatePSTTimeDisplay, MILLISECONDS_BETWEEN_TIME_UPDATES);
+  }
+
+  initializeApplication();
 });

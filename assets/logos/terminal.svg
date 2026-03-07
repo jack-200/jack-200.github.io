@@ -5,9 +5,8 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <!-- Black Background -->
   <rect width="512" height="512" fill="#020205" />
-  <!-- Matrix Green Border -->
+
   <rect
     x="40"
     y="40"
@@ -17,7 +16,7 @@
     stroke="#39ff14"
     stroke-width="40"
   />
-  <!-- Cursor Symbol -->
+
   <path
     d="M140 140L260 256L140 372"
     stroke="#39ff14"

@@ -5,25 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jack Liang - Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="assets/logos/terminal.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Fira+Code:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/style.css" />
 
     <meta name="title" content="Jack Liang - Portfolio" />
     <meta
       name="description"
-      content="Portfolio of Jack Liang - Full-Stack Software Engineer."
+      content="Jack Liang - Software Engineer Portfolio"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jack-200.github.io/" />
     <meta property="og:title" content="Jack Liang - Portfolio" />
     <meta
       property="og:description"
-      content="Portfolio of Jack Liang - Full-Stack Software Engineer."
+      content="Jack Liang - Software Engineer Portfolio"
     />
     <meta property="og:image" content="assets/logos/terminal.png" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -31,12 +25,19 @@
     <meta property="twitter:title" content="Jack Liang - Portfolio" />
     <meta
       property="twitter:description"
-      content="Portfolio of Jack Liang - Full-Stack Software Engineer."
+      content="Jack Liang - Software Engineer Portfolio"
     />
     <meta property="twitter:image" content="assets/logos/terminal.png" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://skillicons.dev https://img.shields.io https://ghchart.rshah.org https://github-readme-streak-stats.herokuapp.com https://github-readme-stats-fast.vercel.app https://github-profile-summary-cards.vercel.app https://github-profile-trophy.vercel.app https://github-readme-stats.vercel.app; connect-src 'self';"
+      content="
+        default-src 'self'; 
+        script-src 'self'; 
+        style-src 'self' 'unsafe-inline'; 
+        font-src 'self'; 
+        img-src 'self' data:; 
+        connect-src 'self';
+      "
     />
   </head>
 
@@ -154,7 +155,7 @@
                     Software Engineer Intern
                   </h3>
                   <p class="education-degree">Digital NEST · Part-time</p>
-                  <p class="education-meta">Sep 2025 - Present · 6 mos</p>
+                  <p class="education-meta">Sep 2025 - Present · 7 mos</p>
                   <p class="education-meta">
                     Gilroy, California, United States · On-site
                   </p>
@@ -195,7 +196,7 @@
             <div class="education-container flex-col-gap-1-5">
               <div class="education-item">
                 <img
-                  src="assets/logos/sjsu-logo.jpg"
+                  src="assets/logos/san-jose-state-university-logo.jpg"
                   alt="San José State University logo"
                   class="education-logo"
                 />
@@ -215,7 +216,7 @@
 
               <div class="education-item">
                 <img
-                  src="assets/logos/sjsu-logo.jpg"
+                  src="assets/logos/san-jose-state-university-logo.jpg"
                   alt="San José State University logo"
                   class="education-logo"
                 />
@@ -235,7 +236,7 @@
 
               <div class="education-item">
                 <img
-                  src="assets/logos/de-anza-logo.jpg"
+                  src="assets/logos/de-anza-college-logo.jpg"
                   alt="De Anza College logo"
                   class="education-logo"
                 />
@@ -262,7 +263,7 @@
             <div class="education-container flex-col-gap-1-5">
               <div class="education-item">
                 <img
-                  src="assets/logos/aws-cert-logo.jpg"
+                  src="assets/logos/aws-certification-logo.jpg"
                   alt="AWS Certified Cloud Practitioner"
                   class="education-logo"
                 />
@@ -281,13 +282,7 @@
                     href="https://www.credly.com/badges/fe788e31-38b3-4c72-a076-8226af1b86da/linked_in_profile"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="color-cyan fs-0-8 mt-0-5 block decoration-none transition-all hover-border-cyan"
-                    style="
-                      display: inline-block !important;
-                      border: 1px solid rgba(0, 255, 204, 0.3);
-                      padding: 2px 8px;
-                      border-radius: 4px;
-                    "
+                    class="credential-link color-cyan fs-0-8 mt-0-5 block decoration-none transition-all hover-border-cyan"
                   >
                     [ VIEW_CREDENTIAL ]
                   </a>
@@ -313,48 +308,179 @@
               >// SKILLS</span
             >
             <div class="skills-grid mb-3">
+              <!-- Programming Languages -->
               <div
                 class="skill-category tech-module"
                 style="--accent-color: var(--color-cyan)"
               >
-                <div class="module-header">[HIGH_LEVEL_&_SCRIPTING]</div>
-                <img
-                  src="https://skillicons.dev/icons?i=python,java,lua,powershell"
-                  alt="Python, Java, Lua, PowerShell"
-                />
+                <div class="module-header">[PROGRAMMING_LANGUAGES]</div>
+                <div class="flex-center-gap-0-5 mt-1 flex-wrap justify-center">
+                  <div class="sub-category-label">// WEB & GENERAL PURPOSE</div>
+                  <img
+                    src="assets/icons/programming/python-shield.svg"
+                    alt="Python"
+                  />
+                  <img
+                    src="assets/icons/programming/java-shield.svg"
+                    alt="Java"
+                  />
+                  <div class="w-100"></div>
+                  <img
+                    src="assets/icons/programming/javascript-shield.svg"
+                    alt="JavaScript"
+                  />
+                  <img
+                    src="assets/icons/programming/typescript-shield.svg"
+                    alt="TypeScript"
+                  />
+                  <div class="w-100"></div>
+                  <div class="sub-category-label">// SYSTEMS & LOW-LEVEL</div>
+                  <img src="assets/icons/programming/c-shield.svg" alt="C" />
+                  <img
+                    src="assets/icons/programming/c-plus-plus-shield.svg"
+                    alt="C++"
+                  />
+                  <img
+                    src="assets/icons/programming/lua-shield.svg"
+                    alt="Lua"
+                  />
+                  <div class="w-100"></div>
+                  <div class="sub-category-label">// SHELLS & SCRIPTING</div>
+                  <img
+                    src="assets/icons/programming/bash-shield.svg"
+                    alt="Bash / Zsh"
+                  />
+                  <img
+                    src="assets/icons/programming/powershell-shield.svg"
+                    alt="PowerShell"
+                  />
+                  <img
+                    src="assets/icons/programming/cmd-shield.svg"
+                    alt="CMD"
+                  />
+                  <div class="w-100"></div>
+                  <div class="sub-category-label">
+                    // FUNCTIONAL PROGRAMMING
+                  </div>
+                  <img
+                    src="assets/icons/programming/scheme-shield.svg"
+                    alt="Scheme"
+                  />
+                  <img
+                    src="assets/icons/programming/haskell-shield.svg"
+                    alt="Haskell"
+                  />
+                  <img
+                    src="assets/icons/programming/prolog-shield.svg"
+                    alt="Prolog"
+                  />
+                </div>
               </div>
+
+              <!-- Frontend Development -->
               <div
                 class="skill-category tech-module"
                 style="--accent-color: var(--color-pink)"
               >
-                <div class="module-header">[WEB_DEVELOPMENT]</div>
-                <img
-                  src="https://skillicons.dev/icons?i=js,ts,html,css"
-                  alt="JavaScript, TypeScript, HTML, CSS"
-                />
+                <div class="module-header">[FRONTEND_DEVELOPMENT]</div>
+                <div class="flex-center-gap-0-5 mt-1 flex-wrap justify-center">
+                  <div class="sub-category-label">// FRAMEWORKS & UI</div>
+                  <img
+                    src="assets/icons/frontend/react-shield.svg"
+                    alt="React"
+                  />
+                  <img src="assets/icons/frontend/vite-shield.svg" alt="Vite" />
+                  <div class="w-100"></div>
+                  <div class="sub-category-label">// FOUNDATIONS</div>
+                  <img
+                    src="assets/icons/frontend/html5-shield.svg"
+                    alt="HTML"
+                  />
+                  <img src="assets/icons/frontend/css3-shield.svg" alt="CSS" />
+                  <img
+                    src="assets/icons/frontend/tailwind-css-shield.svg"
+                    alt="Tailwind"
+                  />
+                </div>
               </div>
+
+              <!-- Backend & Generative AI -->
               <div
                 class="skill-category tech-module"
                 style="--accent-color: var(--color-green)"
               >
-                <div class="module-header">[LOW_LEVEL]</div>
-                <img src="https://skillicons.dev/icons?i=c,cpp" alt="C, C++" />
+                <div class="module-header">[BACKEND_&_GENERATIVE_AI]</div>
+                <div class="flex-center-gap-0-5 mt-1 flex-wrap justify-center">
+                  <div class="sub-category-label">// CORE BACKEND</div>
+                  <img
+                    src="assets/icons/backend/sqlite-shield.svg"
+                    alt="SQLite"
+                  />
+                  <img
+                    src="assets/icons/backend/flask-shield.svg"
+                    alt="Flask"
+                  />
+                  <img
+                    src="assets/icons/backend/gunicorn-shield.svg"
+                    alt="Gunicorn"
+                  />
+                  <div class="w-100"></div>
+                  <div class="sub-category-label">// AI & LLMs</div>
+                  <img
+                    src="assets/icons/backend/google-gemini-shield.svg"
+                    alt="Gemini"
+                  />
+                  <img
+                    src="assets/icons/backend/chatgpt-shield.svg"
+                    alt="ChatGPT"
+                  />
+                  <img
+                    src="assets/icons/backend/aws-bedrock-shield.svg"
+                    alt="Bedrock"
+                  />
+                  <div class="w-100"></div>
+                  <div class="sub-category-label">// UTILITIES</div>
+                  <img src="assets/icons/backend/uv-shield.svg" alt="uv" />
+                  <img
+                    src="assets/icons/backend/pillow-shield.svg"
+                    alt="Pillow"
+                  />
+                </div>
               </div>
-              <div class="skill-category tech-module">
-                <div class="module-header">[FUNCTIONAL_&_LOGIC]</div>
-                <div class="flex-center-gap-1 mt-1 flex-wrap justify-center">
+
+              <!-- Cloud & DevOps -->
+              <div
+                class="skill-category tech-module"
+                style="--accent-color: var(--color-violet)"
+              >
+                <div class="module-header">[CLOUD_&_DEVOPS]</div>
+                <div class="flex-center-gap-0-5 mt-1 flex-wrap justify-center">
+                  <div class="sub-category-label">// CLOUD INFRASTRUCTURE</div>
+                  <img src="assets/icons/cloud/aws-shield.svg" alt="AWS" />
                   <img
-                    src="https://img.shields.io/badge/Scheme-000000?style=for-the-badge&logo=scheme&logoColor=white"
-                    alt="Scheme"
+                    src="assets/icons/cloud/amazon-s3-shield.svg"
+                    alt="Amazon S3"
                   />
                   <img
-                    src="https://img.shields.io/badge/Haskell-5e5185?style=for-the-badge&logo=haskell&logoColor=white"
-                    alt="Haskell"
+                    src="assets/icons/cloud/amazon-lambda-shield.svg"
+                    alt="Amazon Lambda"
                   />
                   <img
-                    src="https://img.shields.io/badge/Prolog-424242?style=for-the-badge"
-                    alt="Prolog"
+                    src="assets/icons/cloud/amazon-ecr-shield.svg"
+                    alt="Amazon ECR"
                   />
+                  <img
+                    src="assets/icons/cloud/docker-shield.svg"
+                    alt="Docker"
+                  />
+                  <div class="w-100"></div>
+                  <div class="sub-category-label">// DEV PIPELINE</div>
+                  <img src="assets/icons/cloud/git-shield.svg" alt="Git" />
+                  <img
+                    src="assets/icons/cloud/github-shield.svg"
+                    alt="GitHub"
+                  />
+                  <img src="assets/icons/cloud/npm-shield.svg" alt="npm" />
                 </div>
               </div>
             </div>
@@ -380,14 +506,26 @@
                       PDF & Image Tools GUI
                     </h3>
                     <div class="project-badges flex-wrap gap-0-5 flex mt-0-5">
-                      <img
-                        src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"
-                        alt="Python Badge"
-                      />
-                      <img
-                        src="https://img.shields.io/badge/PyQt5-41CD52?style=flat-square&logo=qt&logoColor=white"
-                        alt="PyQt5 Badge"
-                      />
+                      <span class="project-badge">
+                        <img
+                          src="assets/icons/programming/python-logo.svg"
+                          alt="Python Logo"
+                          height="14"
+                          width="14"
+                          style="filter: brightness(0.8)"
+                        />
+                        Python
+                      </span>
+                      <span class="project-badge">
+                        <img
+                          src="assets/icons/programming/python-logo.svg"
+                          alt="PyQt5 Logo"
+                          height="14"
+                          width="14"
+                          style="filter: brightness(0.8)"
+                        />
+                        PyQt5
+                      </span>
                     </div>
 
                     <p class="color-main fs-1 lh-1-5 flex-grow">
@@ -406,7 +544,7 @@
                         style="--accent-color: #ffffff"
                       >
                         <img
-                          src="assets/icons/github.svg"
+                          src="assets/icons/social/github-logo.svg"
                           class="node-icon"
                           alt="GitHub Logo"
                         />
@@ -429,18 +567,36 @@
                       Terminal OS Portfolio
                     </h3>
                     <div class="project-badges flex-wrap gap-0-5 flex mt-0-5">
-                      <img
-                        src="https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E"
-                        alt="JS Badge"
-                      />
-                      <img
-                        src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"
-                        alt="CSS Badge"
-                      />
-                      <img
-                        src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"
-                        alt="HTML Badge"
-                      />
+                      <span class="project-badge">
+                        <img
+                          src="assets/icons/programming/javascript-logo.svg"
+                          alt="JavaScript Logo"
+                          height="14"
+                          width="14"
+                          style="filter: brightness(0.8)"
+                        />
+                        JavaScript
+                      </span>
+                      <span class="project-badge">
+                        <img
+                          src="assets/icons/frontend/css3-logo.svg"
+                          alt="CSS3 Logo"
+                          height="14"
+                          width="14"
+                          style="filter: brightness(0.8)"
+                        />
+                        CSS3
+                      </span>
+                      <span class="project-badge">
+                        <img
+                          src="assets/icons/frontend/html5-logo.svg"
+                          alt="HTML5 Logo"
+                          height="14"
+                          width="14"
+                          style="filter: brightness(0.8)"
+                        />
+                        HTML5
+                      </span>
                     </div>
 
                     <p class="color-main fs-1 lh-1-5 flex-grow">
@@ -459,7 +615,7 @@
                         style="--accent-color: #ffffff"
                       >
                         <img
-                          src="assets/icons/github.svg"
+                          src="assets/icons/social/github-logo.svg"
                           class="node-icon"
                           alt="GitHub Logo"
                         />
@@ -480,7 +636,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/github.svg"
+                    src="assets/icons/social/github-logo.svg"
                     class="node-icon"
                     alt="GitHub Logo"
                   />
@@ -499,52 +655,52 @@
 
                 <img
                   class="activity-heatmap"
-                  src="https://ghchart.rshah.org/39ff14/jack-200"
-                  alt="Jack's GitHub Contribution Graph"
+                  src="assets/github-stats/activity-heatmap.svg"
+                  alt="GitHub Contribution Graph"
                 />
 
                 <img
                   class="contribution-streaks"
-                  src="https://github-readme-streak-stats.herokuapp.com/?user=jack-200&theme=chartreuse-dark"
-                  alt="GitHub Streak Stats"
+                  src="assets/github-stats/contribution-streaks.svg"
+                  alt="GitHub Contribution Streaks"
                 />
 
                 <img
                   class="detailed-global-stats"
-                  src="https://github-readme-stats-fast.vercel.app/api?username=jack-200&theme=chartreuse-dark&show_icons=true&count_private=true"
-                  alt="Detailed GitHub Stats"
+                  src="assets/github-stats/detailed-global-stats.svg"
+                  alt="GitHub Profile Statistics"
                 />
 
                 <img
                   class="detailed-language-breakdown"
-                  src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=jack-200&theme=chartreuse-dark&layout=compact&hide_title=false"
-                  alt="Top Languages Detailed"
+                  src="assets/github-stats/detailed-language-breakdown.svg"
+                  alt="GitHub Language Breakdown"
                 />
 
                 <img
                   class="productive-time-breakdown"
-                  src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jack-200&theme=dark"
-                  alt="Productive Time Breakdown"
+                  src="assets/github-stats/productive-time-breakdown.svg"
+                  alt="GitHub Productive Time Distribution"
                 />
 
                 <img
                   class="github-profile-details"
-                  src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jack-200&theme=dark"
-                  alt="GitHub Profile Details"
+                  src="assets/github-stats/github-profile-details.svg"
+                  alt="GitHub Organization Profile"
                 />
 
                 <div class="secondary-profile-metrics flex-col-center-gap-2">
                   <img
-                    src="https://github-profile-trophy.vercel.app/?username=jack-200&theme=juicyfresh&column=4"
-                    alt="GitHub Profile Trophies"
+                    src="assets/github-stats/github-profile-trophies.svg"
+                    alt="GitHub Achievement Trophies"
                     class="unreliable-img"
-                    data-fallback-text="GitHub Profile Trophies"
+                    data-fallback-text="GitHub Achievement Trophies"
                   />
                   <img
-                    src="https://github-readme-stats.vercel.app/api?username=jack-200&theme=chartreuse-dark&show_icons=true&count_private=true"
-                    alt="GitHub Stats Summary"
+                    src="assets/github-stats/github-stats-summary.svg"
+                    alt="GitHub Repository Overview"
                     class="unreliable-img"
-                    data-fallback-text="GitHub Stats Summary"
+                    data-fallback-text="GitHub Repository Overview"
                   />
                 </div>
               </div>
@@ -599,11 +755,8 @@
               </p>
             </div>
 
-            <div class="links-container" style="gap: 1rem; margin-top: 1rem">
-              <div
-                class="flex-center-gap-1 flex-wrap justify-center w-100"
-                style="gap: 1rem"
-              >
+            <div class="links-container">
+              <div class="flex-center-gap-1 flex-wrap justify-center w-100">
                 <a
                   href="mailto:jackliang33432@gmail.com"
                   aria-label="Email Jack"
@@ -612,7 +765,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/gmail.svg"
+                    src="assets/icons/social/gmail-logo.svg"
                     class="node-icon"
                     alt="Gmail Logo"
                   />
@@ -627,7 +780,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/linkedin.svg"
+                    src="assets/icons/social/linkedin-logo.svg"
                     class="node-icon"
                     alt="LinkedIn Logo"
                   />
@@ -648,7 +801,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/leetcode.svg"
+                    src="assets/icons/social/leetcode-logo.svg"
                     class="node-icon"
                     alt="LeetCode Logo"
                   />
@@ -663,7 +816,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/codewars.svg"
+                    src="assets/icons/social/codewars-logo.svg"
                     class="node-icon"
                     alt="CodeWars Logo"
                   />
@@ -678,7 +831,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/monkeytype.svg"
+                    src="assets/icons/social/monkeytype-logo.svg"
                     class="node-icon"
                     alt="MonkeyType Logo"
                   />

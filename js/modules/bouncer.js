@@ -16,6 +16,7 @@ export class BouncingLogoContainer {
     element.style.height = "60px";
     element.style.filter = "drop-shadow(0 0 5px rgba(255,255,255,0.2))";
     element.style.userSelect = "none";
+    element.onerror = () => element.remove();
     this.container.appendChild(element);
 
     const randomPosX = Math.random() * (window.innerWidth - 60);

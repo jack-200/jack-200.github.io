@@ -338,6 +338,12 @@
   gap: 1rem;
 }
 
+.flex-center-gap-0-5 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .flex-baseline-between {
   display: flex;
   justify-content: space-between;

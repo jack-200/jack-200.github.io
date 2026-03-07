@@ -1,0 +1,73 @@
+name: Deploy static content to Pages
+
+on:
+  # Triggers the deployment on push to the main branch
+  push:
+    branches: ["main"]
+
+  # Automatically fetch updated GitHub stats and redeploy every night at midnight UTC
+  schedule:
+    - cron: "0 0 * * *"
+
+  # Allows manual deployment from the Actions tab in the GitHub UI
+  workflow_dispatch:
+
+# Grant necessary permissions for deploying to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Ensure only one deployment runs at a time to prevent conflicts
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Custom step: Download live GitHub stats *during* deployment
+      # This ensures the portfolio has up-to-date stats without making 3rd-party
+      # HTTP requests on the frontend (keeping the site private and fast)
+      - name: Fetch GitHub Stats
+        run: |
+          mkdir -p assets/github-stats
+
+          # Array of URLs and their corresponding file names
+          declare -A STATS=(
+            ["activity-heatmap.svg"]="https://ghchart.rshah.org/39ff14/jack-200"
+            ["contribution-streaks.svg"]="https://github-readme-streak-stats.herokuapp.com/?user=jack-200&theme=chartreuse-dark"
+            ["detailed-global-stats.svg"]="https://github-readme-stats-fast.vercel.app/api?username=jack-200&theme=chartreuse-dark&show_icons=true&count_private=true"
+            ["detailed-language-breakdown.svg"]="https://github-readme-stats-fast.vercel.app/api/top-langs?username=jack-200&theme=chartreuse-dark&layout=compact&hide_title=false"
+            ["productive-time-breakdown.svg"]="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jack-200&theme=dark"
+            ["github-profile-details.svg"]="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jack-200&theme=dark"
+            ["github-profile-trophies.svg"]="https://github-profile-trophy.vercel.app/?username=jack-200&theme=juicyfresh&column=4"
+            ["github-stats-summary.svg"]="https://github-readme-stats.vercel.app/api?username=jack-200&theme=chartreuse-dark&show_icons=true&count_private=true"
+          )
+
+          # Fetch all stats concurrently
+          # Download all SVG statistics in parallel into the assets folder
+          for file in "${!STATS[@]}"; do
+            curl -sSL "${STATS[$file]}" -o "assets/github-stats/$file" &
+          done
+
+          # Wait for all background curl processes to finish
+          wait
+
+      # Package the repository and deploy it to GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
