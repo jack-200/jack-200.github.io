@@ -1,3 +1,7 @@
+:root {
+  --force-reset-inherited-margins: 0;
+}
+
 .nav-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -37,6 +41,7 @@
   color: var(--color-cyan);
   background: transparent;
 }
+
 .tab-button:nth-child(1).active-tab {
   background-color: var(--color-cyan);
   color: var(--bg-base);
@@ -50,6 +55,7 @@
   color: var(--color-pink);
   background: transparent;
 }
+
 .tab-button:nth-child(2).active-tab {
   background-color: var(--color-pink);
   color: var(--bg-base);
@@ -63,6 +69,7 @@
   color: var(--color-violet);
   background: transparent;
 }
+
 .tab-button:nth-child(3).active-tab {
   background-color: var(--color-violet);
   color: var(--bg-base);
@@ -168,11 +175,6 @@
   margin-top: 0 !important;
 }
 
-.tech-module img {
-  margin-top: 0.5rem;
-  max-width: 100%;
-}
-
 .tech-module:hover {
   border-color: var(--accent-color, var(--text-main));
   box-shadow: inset 0 0 15px var(--accent-color, rgba(0, 255, 204, 0.2));
@@ -187,7 +189,14 @@
   text-shadow: 0 0 8px var(--accent-color, rgba(255, 0, 255, 0.4));
 }
 
-.project-badge {
+.badge-row-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.project-tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -198,7 +207,91 @@
   font-size: 0.8rem;
   font-weight: 600;
   background: rgba(255, 255, 255, 0.05);
-  margin: 0 4px;
+  transition: all 0.3s ease;
+  line-height: normal;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.project-tag img {
+  height: 14px;
+  width: 14px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(1);
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+  pointer-events: none;
+}
+
+.project-tag:hover {
+  background: rgba(var(--brand-color-rgb, 255, 255, 255), 0.1);
+  border-color: var(--brand-color, var(--color-cyan));
+  box-shadow: 0 0 10px var(--brand-color, rgba(0, 255, 204, 0.2));
+  transform: translateY(-1px);
+  color: var(--brand-color, #fff);
+}
+
+.project-tag:hover img {
+  filter: brightness(1);
+  transform: scale(1.1);
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--brand-color, rgba(255, 255, 255, 0.15));
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(
+    rgba(var(--brand-color-rgb, 255, 255, 255), 0.3),
+    rgba(var(--brand-color-rgb, 255, 255, 255), 0.3)
+  );
+  text-shadow: 0 0 10px rgba(var(--brand-color-rgb, 255, 255, 255), 0.25);
+  transition: all 0.3s ease;
+  line-height: normal;
+  user-select: none;
+  white-space: nowrap;
+  color: var(--brand-color, var(--text-main));
+}
+
+.skill-tag img {
+  height: 14px;
+  width: 14px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+  pointer-events: none;
+  margin: var(--force-reset-inherited-margins) !important;
+}
+
+.parent-accent-dynamic-color-state .skill-tag {
+  border-color: var(--brand-color, rgba(var(--accent-rgb, 255, 255, 255), 0.4));
+  background-image: linear-gradient(
+    rgba(var(--brand-color-rgb, var(--accent-rgb, 255, 255, 255)), 0.3),
+    rgba(var(--brand-color-rgb, var(--accent-rgb, 255, 255, 255)), 0.3)
+  );
+}
+
+.skill-tag:hover {
+  background: rgba(
+    var(--brand-color-rgb, var(--accent-rgb, 255, 255, 255)),
+    0.12
+  );
+  border-color: var(--brand-color, var(--accent-color));
+  box-shadow: 0 0 12px
+    var(--brand-color, rgba(var(--accent-rgb, 0, 255, 204), 0.3));
+  transform: translateY(-2px);
+  color: var(--brand-color, #fff);
 }
 
 .credential-link {
@@ -206,6 +299,12 @@
   border: 1px solid rgba(0, 255, 204, 0.3) !important;
   padding: 2px 8px !important;
   border-radius: 4px !important;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .education-item {
@@ -256,19 +355,17 @@
   margin-right: 5px;
   background-color: var(--text-muted);
 }
+
 .dot:nth-child(1) {
   background-color: #ff5f56;
 }
+
 .dot:nth-child(2) {
   background-color: #ffbd2e;
 }
+
 .dot:nth-child(3) {
   background-color: #27c93f;
-}
-
-.status-indicator {
-  color: #27c93f;
-  animation: blink 2s infinite;
 }
 
 .node-icon {
@@ -295,6 +392,23 @@
   gap: 1rem;
   margin-top: 0.5rem;
   max-width: 300px;
+}
+
+.themed-simulator {
+  border-left: 3px solid var(--theme-color, var(--color-cyan));
+  padding-left: 1rem;
+}
+
+.themed-simulator label {
+  color: var(--theme-color, var(--color-cyan)) !important;
+}
+
+.themed-simulator input[type="range"] {
+  accent-color: var(--theme-color, var(--color-cyan)) !important;
+}
+
+.themed-simulator .time-simulator-ctrl span {
+  color: var(--theme-color, var(--color-cyan)) !important;
 }
 
 .github-stats img {
@@ -326,6 +440,12 @@
   color: var(--accent-color, var(--color-cyan)) !important;
   font-size: 1.2rem;
   animation: section-heading-glow 2.5s ease-in-out infinite;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel-content > .section-heading:first-child {
+  margin-top: 0;
 }
 
 .section-heading::after {
@@ -376,20 +496,12 @@
   100% {
     text-shadow: 0 0 4px var(--accent-color, var(--color-cyan));
   }
+
   50% {
     text-shadow:
       0 0 10px var(--accent-color, var(--color-cyan)),
       0 0 20px var(--accent-color, var(--color-cyan));
   }
-}
-
-.fallback-text {
-  font-family: "Fira Code", monospace;
-  font-size: 0.8rem !important;
-  color: #444 !important;
-  text-align: center;
-  margin: 1.5rem 0;
-  width: 100%;
 }
 
 .brand-title {

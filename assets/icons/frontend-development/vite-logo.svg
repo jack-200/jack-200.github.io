@@ -1,0 +1,41 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 410 404"
+  role="img"
+  aria-label="Vite"
+>
+  <title>Vite</title>
+  <defs>
+    <linearGradient
+      id="vite-gradient-v"
+      x1="6"
+      y1="33"
+      x2="235"
+      y2="344"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#41D1FF" />
+      <stop offset="1" stop-color="#BD34FE" />
+    </linearGradient>
+    <linearGradient
+      id="vite-gradient-bolt"
+      x1="194.65"
+      y1="8.82"
+      x2="236.08"
+      y2="292.99"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#FFEA83" />
+      <stop offset="0.083" stop-color="#FFDD35" />
+      <stop offset="1" stop-color="#FFA800" />
+    </linearGradient>
+  </defs>
+  <path
+    fill="url(#vite-gradient-v)"
+    d="M399.64 59.52L215.64 388.55c-3.8 6.79-13.56 6.83-17.41.07L10.58 59.56c-4.2-7.37 2.1-16.29 10.45-14.8l184.19 32.92c1.18.21 2.38.2 3.55-.01l180.34-32.87c8.32-1.52 14.65 7.33 10.53 14.72z"
+  />
+  <path
+    fill="url(#vite-gradient-bolt)"
+    d="M292.97 1.57L156.8 28.26c-2.24.44-3.9 2.34-4.03 4.61l-8.38 141.46c-.2 3.33 2.86 5.92 6.11 5.17l37.91-8.75c3.55-.82 6.75 2.31 6.02 5.87l-11.26 55.15c-.76 3.71 2.73 6.89 6.35 5.79l23.42-7.11c3.63-1.1 7.12 2.08 6.35 5.8l-17.9 86.63c-1.12 5.42 6.09 8.37 9.09 3.73l2.01-3.1 110.95-221.43c1.86-3.71-1.34-7.94-5.41-7.15l-39.02 7.53c-3.67.71-6.79-2.71-5.75-6.3L298.73 7.87c1.04-3.59-2.09-7.01-5.76-6.3z"
+  />
+</svg>

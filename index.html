@@ -19,7 +19,10 @@
       property="og:description"
       content="Jack Liang - Software Engineer Portfolio"
     />
-    <meta property="og:image" content="assets/logos/terminal.png" />
+    <meta
+      property="og:image"
+      content="https://jack-200.github.io/assets/logos/terminal.png"
+    />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://jack-200.github.io/" />
     <meta property="twitter:title" content="Jack Liang - Portfolio" />
@@ -27,7 +30,10 @@
       property="twitter:description"
       content="Jack Liang - Software Engineer Portfolio"
     />
-    <meta property="twitter:image" content="assets/logos/terminal.png" />
+    <meta
+      property="twitter:image"
+      content="https://jack-200.github.io/assets/logos/terminal.png"
+    />
     <meta
       http-equiv="Content-Security-Policy"
       content="
@@ -140,7 +146,7 @@
               style="--accent-color: var(--color-cyan)"
               >// EXPERIENCE</span
             >
-            <div class="education-container flex-col-gap-1-5 mb-2-5">
+            <div class="education-container">
               <div class="education-item">
                 <img
                   src="assets/logos/digital-nest-logo.svg"
@@ -189,11 +195,11 @@
             </div>
 
             <span
-              class="panel-title section-heading mb-1"
+              class="panel-title section-heading"
               style="--accent-color: var(--color-yellow)"
               >// EDUCATION</span
             >
-            <div class="education-container flex-col-gap-1-5">
+            <div class="education-container">
               <div class="education-item">
                 <img
                   src="assets/logos/san-jose-state-university-logo.jpg"
@@ -256,11 +262,11 @@
             </div>
 
             <span
-              class="panel-title section-heading mb-1 mt-2-5"
+              class="panel-title section-heading"
               style="--accent-color: var(--color-orange)"
               >// CERTIFICATIONS</span
             >
-            <div class="education-container flex-col-gap-1-5">
+            <div class="education-container">
               <div class="education-item">
                 <img
                   src="assets/logos/aws-certification-logo.jpg"
@@ -310,177 +316,404 @@
             <div class="skills-grid mb-3">
               <!-- Programming Languages -->
               <div
-                class="skill-category tech-module"
-                style="--accent-color: var(--color-cyan)"
+                class="skill-category tech-module parent-accent-dynamic-color-state"
+                style="
+                  --accent-color: var(--color-cyan);
+                  --accent-rgb: 0, 255, 204;
+                "
               >
                 <div class="module-header">[PROGRAMMING_LANGUAGES]</div>
-                <div class="flex-center-gap-0-5 mt-1 flex-wrap justify-center">
-                  <div class="sub-category-label">// WEB & GENERAL PURPOSE</div>
-                  <img
-                    src="assets/icons/programming/python-shield.svg"
-                    alt="Python"
-                  />
-                  <img
-                    src="assets/icons/programming/java-shield.svg"
-                    alt="Java"
-                  />
-                  <div class="w-100"></div>
-                  <img
-                    src="assets/icons/programming/javascript-shield.svg"
-                    alt="JavaScript"
-                  />
-                  <img
-                    src="assets/icons/programming/typescript-shield.svg"
-                    alt="TypeScript"
-                  />
-                  <div class="w-100"></div>
-                  <div class="sub-category-label">// SYSTEMS & LOW-LEVEL</div>
-                  <img src="assets/icons/programming/c-shield.svg" alt="C" />
-                  <img
-                    src="assets/icons/programming/c-plus-plus-shield.svg"
-                    alt="C++"
-                  />
-                  <img
-                    src="assets/icons/programming/lua-shield.svg"
-                    alt="Lua"
-                  />
-                  <div class="w-100"></div>
-                  <div class="sub-category-label">// SHELLS & SCRIPTING</div>
-                  <img
-                    src="assets/icons/programming/bash-shield.svg"
-                    alt="Bash / Zsh"
-                  />
-                  <img
-                    src="assets/icons/programming/powershell-shield.svg"
-                    alt="PowerShell"
-                  />
-                  <img
-                    src="assets/icons/programming/cmd-shield.svg"
-                    alt="CMD"
-                  />
-                  <div class="w-100"></div>
-                  <div class="sub-category-label">
-                    // FUNCTIONAL PROGRAMMING
-                  </div>
-                  <img
-                    src="assets/icons/programming/scheme-shield.svg"
-                    alt="Scheme"
-                  />
-                  <img
-                    src="assets/icons/programming/haskell-shield.svg"
-                    alt="Haskell"
-                  />
-                  <img
-                    src="assets/icons/programming/prolog-shield.svg"
-                    alt="Prolog"
-                  />
+                <div class="sub-category-label mt-0-5">
+                  // WEB & GENERAL PURPOSE
+                </div>
+                <div class="badge-row-container mt-0-5 justify-center">
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #3776ab;
+                      --brand-color-rgb: 55, 118, 171;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/python-logo.svg"
+                      alt="Python"
+                    />Python</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #007396;
+                      --brand-color-rgb: 0, 115, 150;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/java-logo.svg"
+                      alt="Java"
+                    />Java</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #f7df1e;
+                      --brand-color-rgb: 247, 223, 30;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/javascript-logo.svg"
+                      alt="JavaScript"
+                    />JavaScript</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #3178c6;
+                      --brand-color-rgb: 49, 120, 198;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/typescript-logo.svg"
+                      alt="TypeScript"
+                    />TypeScript</span
+                  >
+                </div>
+
+                <div class="sub-category-label mt-1-5">
+                  // SYSTEMS & LOW-LEVEL
+                </div>
+                <div class="badge-row-container mt-0-5 justify-center">
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #7986cb;
+                      --brand-color-rgb: 121, 134, 203;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/c-logo.svg"
+                      alt="C"
+                    />C</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #007ee5;
+                      --brand-color-rgb: 0, 126, 229;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/c-plus-plus-logo.svg"
+                      alt="C++"
+                    />C++</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #61b1ff;
+                      --brand-color-rgb: 97, 177, 255;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/lua-logo.svg"
+                      alt="Lua"
+                    />Lua</span
+                  >
+                </div>
+
+                <div class="sub-category-label mt-1-5">
+                  // SHELLS & SCRIPTING
+                </div>
+                <div class="badge-row-container mt-0-5 justify-center">
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #4eaa25;
+                      --brand-color-rgb: 78, 170, 37;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/bash-logo.svg"
+                      alt="Bash / Zsh"
+                    />Bash / Zsh</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #5391fe;
+                      --brand-color-rgb: 83, 145, 254;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/powershell-logo.svg"
+                      alt="PowerShell"
+                    />PowerShell</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #aaaaaa;
+                      --brand-color-rgb: 170, 170, 170;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/cmd-logo.svg"
+                      alt="CMD"
+                    />CMD</span
+                  >
                 </div>
               </div>
 
               <!-- Frontend Development -->
               <div
-                class="skill-category tech-module"
-                style="--accent-color: var(--color-pink)"
+                class="skill-category tech-module parent-accent-dynamic-color-state"
+                style="
+                  --accent-color: var(--color-pink);
+                  --accent-rgb: 255, 0, 255;
+                "
               >
                 <div class="module-header">[FRONTEND_DEVELOPMENT]</div>
-                <div class="flex-center-gap-0-5 mt-1 flex-wrap justify-center">
-                  <div class="sub-category-label">// FRAMEWORKS & UI</div>
-                  <img
-                    src="assets/icons/frontend/react-shield.svg"
-                    alt="React"
-                  />
-                  <img src="assets/icons/frontend/vite-shield.svg" alt="Vite" />
-                  <div class="w-100"></div>
-                  <div class="sub-category-label">// FOUNDATIONS</div>
-                  <img
-                    src="assets/icons/frontend/html5-shield.svg"
-                    alt="HTML"
-                  />
-                  <img src="assets/icons/frontend/css3-shield.svg" alt="CSS" />
-                  <img
-                    src="assets/icons/frontend/tailwind-css-shield.svg"
-                    alt="Tailwind"
-                  />
+                <div class="sub-category-label mt-0-5">// FRAMEWORKS & UI</div>
+                <div class="badge-row-container mt-0-5 justify-center">
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #61dafb;
+                      --brand-color-rgb: 97, 218, 251;
+                    "
+                    ><img
+                      src="assets/icons/frontend-development/react-logo.svg"
+                      alt="React"
+                    />React</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #646cff;
+                      --brand-color-rgb: 100, 108, 255;
+                    "
+                    ><img
+                      src="assets/icons/frontend-development/vite-logo.svg"
+                      alt="Vite"
+                    />Vite</span
+                  >
+                </div>
+
+                <div class="sub-category-label mt-1-5">// FOUNDATIONS</div>
+                <div class="badge-row-container mt-0-5 justify-center">
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #e34f26;
+                      --brand-color-rgb: 227, 79, 38;
+                    "
+                    ><img
+                      src="assets/icons/frontend-development/html5-logo.svg"
+                      alt="HTML"
+                    />HTML</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #1572b6;
+                      --brand-color-rgb: 21, 114, 182;
+                    "
+                    ><img
+                      src="assets/icons/frontend-development/css3-logo.svg"
+                      alt="CSS"
+                    />CSS</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #06b6d4;
+                      --brand-color-rgb: 6, 182, 212;
+                    "
+                    ><img
+                      src="assets/icons/frontend-development/tailwind-css-logo.svg"
+                      alt="Tailwind"
+                    />Tailwind</span
+                  >
                 </div>
               </div>
 
               <!-- Backend & Generative AI -->
               <div
-                class="skill-category tech-module"
-                style="--accent-color: var(--color-green)"
+                class="skill-category tech-module parent-accent-dynamic-color-state"
+                style="
+                  --accent-color: var(--color-green);
+                  --accent-rgb: 57, 255, 20;
+                "
               >
                 <div class="module-header">[BACKEND_&_GENERATIVE_AI]</div>
-                <div class="flex-center-gap-0-5 mt-1 flex-wrap justify-center">
-                  <div class="sub-category-label">// CORE BACKEND</div>
-                  <img
-                    src="assets/icons/backend/sqlite-shield.svg"
-                    alt="SQLite"
-                  />
-                  <img
-                    src="assets/icons/backend/flask-shield.svg"
-                    alt="Flask"
-                  />
-                  <img
-                    src="assets/icons/backend/gunicorn-shield.svg"
-                    alt="Gunicorn"
-                  />
-                  <div class="w-100"></div>
-                  <div class="sub-category-label">// AI & LLMs</div>
-                  <img
-                    src="assets/icons/backend/google-gemini-shield.svg"
-                    alt="Gemini"
-                  />
-                  <img
-                    src="assets/icons/backend/chatgpt-shield.svg"
-                    alt="ChatGPT"
-                  />
-                  <img
-                    src="assets/icons/backend/aws-bedrock-shield.svg"
-                    alt="Bedrock"
-                  />
-                  <div class="w-100"></div>
-                  <div class="sub-category-label">// UTILITIES</div>
-                  <img src="assets/icons/backend/uv-shield.svg" alt="uv" />
-                  <img
-                    src="assets/icons/backend/pillow-shield.svg"
-                    alt="Pillow"
-                  />
+                <div class="sub-category-label mt-0-5">// CORE BACKEND</div>
+                <div class="badge-row-container mt-0-5 justify-center">
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #00a3e0;
+                      --brand-color-rgb: 0, 163, 224;
+                    "
+                    ><img
+                      src="assets/icons/backend-generative-ai/sqlite-logo.svg"
+                      alt="SQLite"
+                    />SQLite</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #d6d6d6;
+                      --brand-color-rgb: 214, 214, 214;
+                    "
+                    ><img
+                      src="assets/icons/backend-generative-ai/flask-logo.svg"
+                      alt="Flask"
+                    />Flask</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #499848;
+                      --brand-color-rgb: 73, 152, 72;
+                    "
+                    ><img
+                      src="assets/icons/backend-generative-ai/gunicorn-logo.svg"
+                      alt="Gunicorn"
+                    />Gunicorn</span
+                  >
+                </div>
+
+                <div class="sub-category-label mt-1-5">// AI & LLMs</div>
+                <div class="badge-row-container mt-0-5 justify-center">
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #8e75b2;
+                      --brand-color-rgb: 142, 117, 178;
+                    "
+                    ><img
+                      src="assets/icons/backend-generative-ai/google-gemini-logo.svg"
+                      alt="Gemini"
+                    />Gemini</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #74aa9c;
+                      --brand-color-rgb: 116, 170, 156;
+                    "
+                    ><img
+                      src="assets/icons/backend-generative-ai/chatgpt-logo.svg"
+                      alt="ChatGPT"
+                    />ChatGPT</span
+                  >
                 </div>
               </div>
 
               <!-- Cloud & DevOps -->
               <div
-                class="skill-category tech-module"
-                style="--accent-color: var(--color-violet)"
+                class="skill-category tech-module parent-accent-dynamic-color-state"
+                style="
+                  --accent-color: var(--color-violet);
+                  --accent-rgb: 191, 122, 240;
+                "
               >
                 <div class="module-header">[CLOUD_&_DEVOPS]</div>
-                <div class="flex-center-gap-0-5 mt-1 flex-wrap justify-center">
-                  <div class="sub-category-label">// CLOUD INFRASTRUCTURE</div>
-                  <img src="assets/icons/cloud/aws-shield.svg" alt="AWS" />
-                  <img
-                    src="assets/icons/cloud/amazon-s3-shield.svg"
-                    alt="Amazon S3"
-                  />
-                  <img
-                    src="assets/icons/cloud/amazon-lambda-shield.svg"
-                    alt="Amazon Lambda"
-                  />
-                  <img
-                    src="assets/icons/cloud/amazon-ecr-shield.svg"
-                    alt="Amazon ECR"
-                  />
-                  <img
-                    src="assets/icons/cloud/docker-shield.svg"
-                    alt="Docker"
-                  />
-                  <div class="w-100"></div>
-                  <div class="sub-category-label">// DEV PIPELINE</div>
-                  <img src="assets/icons/cloud/git-shield.svg" alt="Git" />
-                  <img
-                    src="assets/icons/cloud/github-shield.svg"
-                    alt="GitHub"
-                  />
-                  <img src="assets/icons/cloud/npm-shield.svg" alt="npm" />
+                <div class="sub-category-label mt-0-5">
+                  // CLOUD INFRASTRUCTURE
+                </div>
+                <div class="badge-row-container mt-0-5 justify-center">
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #ff9900;
+                      --brand-color-rgb: 255, 153, 0;
+                    "
+                    ><img
+                      src="assets/icons/cloud-devops/aws-logo.svg"
+                      alt="AWS"
+                    />AWS</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #569a31;
+                      --brand-color-rgb: 86, 154, 49;
+                    "
+                    ><img
+                      src="assets/icons/cloud-devops/amazon-s3-logo.svg"
+                      alt="Amazon S3"
+                    />Amazon S3</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #f8991d;
+                      --brand-color-rgb: 248, 153, 29;
+                    "
+                    ><img
+                      src="assets/icons/cloud-devops/amazon-lambda-logo.svg"
+                      alt="Amazon Lambda"
+                    />Amazon Lambda</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #f8991d;
+                      --brand-color-rgb: 248, 153, 29;
+                    "
+                    ><img
+                      src="assets/icons/cloud-devops/amazon-ecr-logo.svg"
+                      alt="Amazon ECR"
+                    />Amazon ECR</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #ff9900;
+                      --brand-color-rgb: 255, 153, 0;
+                    "
+                    ><img
+                      src="assets/icons/backend-generative-ai/aws-bedrock-logo.svg"
+                      alt="Bedrock"
+                    />Bedrock</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #2496ed;
+                      --brand-color-rgb: 36, 150, 237;
+                    "
+                    ><img
+                      src="assets/icons/cloud-devops/docker-logo.svg"
+                      alt="Docker"
+                    />Docker</span
+                  >
+                </div>
+
+                <div class="sub-category-label mt-1-5">// DEV PIPELINE</div>
+                <div class="badge-row-container mt-0-5 justify-center">
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #f05032;
+                      --brand-color-rgb: 240, 80, 50;
+                    "
+                    ><img
+                      src="assets/icons/cloud-devops/git-logo.svg"
+                      alt="Git"
+                    />Git</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #f0f6fc;
+                      --brand-color-rgb: 240, 246, 252;
+                    "
+                    ><img
+                      src="assets/icons/cloud-devops/github-logo.svg"
+                      alt="GitHub"
+                    />GitHub</span
+                  >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #cb3837;
+                      --brand-color-rgb: 203, 56, 55;
+                    "
+                    ><img
+                      src="assets/icons/cloud-devops/npm-logo.svg"
+                      alt="npm"
+                    />npm</span
+                  >
                 </div>
               </div>
             </div>
@@ -505,27 +738,36 @@
                     <h3 class="font-fira color-cyan m-0 fs-1-5">
                       PDF & Image Tools GUI
                     </h3>
-                    <div class="project-badges flex-wrap gap-0-5 flex mt-0-5">
-                      <span class="project-badge">
-                        <img
-                          src="assets/icons/programming/python-logo.svg"
+                    <div class="badge-row-container mt-0-5">
+                      <span
+                        class="project-tag"
+                        style="
+                          --brand-color: #3776ab;
+                          --brand-color-rgb: 55, 118, 171;
+                        "
+                        ><img
+                          src="assets/icons/programming-languages/python-logo.svg"
                           alt="Python Logo"
-                          height="14"
-                          width="14"
-                          style="filter: brightness(0.8)"
-                        />
-                        Python
-                      </span>
-                      <span class="project-badge">
-                        <img
-                          src="assets/icons/programming/python-logo.svg"
+                        />Python</span
+                      >
+                      <span class="project-tag"
+                        ><img
+                          src="assets/icons/programming-languages/python-logo.svg"
                           alt="PyQt5 Logo"
-                          height="14"
-                          width="14"
-                          style="filter: brightness(0.8)"
-                        />
-                        PyQt5
-                      </span>
+                        />PyQt5</span
+                      >
+                      <span class="project-tag"
+                        ><img
+                          src="assets/icons/programming-languages/python-logo.svg"
+                          alt="uv Logo"
+                        />uv</span
+                      >
+                      <span class="project-tag"
+                        ><img
+                          src="assets/icons/programming-languages/python-logo.svg"
+                          alt="Pillow Logo"
+                        />Pillow</span
+                      >
                     </div>
 
                     <p class="color-main fs-1 lh-1-5 flex-grow">
@@ -544,7 +786,7 @@
                         style="--accent-color: #ffffff"
                       >
                         <img
-                          src="assets/icons/social/github-logo.svg"
+                          src="assets/icons/cloud-devops/github-logo.svg"
                           class="node-icon"
                           alt="GitHub Logo"
                         />
@@ -566,37 +808,25 @@
                     <h3 class="font-fira color-pink m-0 fs-1-5">
                       Terminal OS Portfolio
                     </h3>
-                    <div class="project-badges flex-wrap gap-0-5 flex mt-0-5">
-                      <span class="project-badge">
-                        <img
-                          src="assets/icons/programming/javascript-logo.svg"
+                    <div class="badge-row-container mt-0-5">
+                      <span class="project-tag"
+                        ><img
+                          src="assets/icons/programming-languages/javascript-logo.svg"
                           alt="JavaScript Logo"
-                          height="14"
-                          width="14"
-                          style="filter: brightness(0.8)"
-                        />
-                        JavaScript
-                      </span>
-                      <span class="project-badge">
-                        <img
-                          src="assets/icons/frontend/css3-logo.svg"
+                        />JavaScript</span
+                      >
+                      <span class="project-tag"
+                        ><img
+                          src="assets/icons/frontend-development/css3-logo.svg"
                           alt="CSS3 Logo"
-                          height="14"
-                          width="14"
-                          style="filter: brightness(0.8)"
-                        />
-                        CSS3
-                      </span>
-                      <span class="project-badge">
-                        <img
-                          src="assets/icons/frontend/html5-logo.svg"
+                        />CSS3</span
+                      >
+                      <span class="project-tag"
+                        ><img
+                          src="assets/icons/frontend-development/html5-logo.svg"
                           alt="HTML5 Logo"
-                          height="14"
-                          width="14"
-                          style="filter: brightness(0.8)"
-                        />
-                        HTML5
-                      </span>
+                        />HTML5</span
+                      >
                     </div>
 
                     <p class="color-main fs-1 lh-1-5 flex-grow">
@@ -615,7 +845,7 @@
                         style="--accent-color: #ffffff"
                       >
                         <img
-                          src="assets/icons/social/github-logo.svg"
+                          src="assets/icons/cloud-devops/github-logo.svg"
                           class="node-icon"
                           alt="GitHub Logo"
                         />
@@ -636,7 +866,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/social/github-logo.svg"
+                    src="assets/icons/cloud-devops/github-logo.svg"
                     class="node-icon"
                     alt="GitHub Logo"
                   />
@@ -723,13 +953,16 @@
             <span class="panel-title">// CONNECT_&_PROFILES</span>
           </div>
           <div class="panel-content">
-            <p class="terminal-text color-muted">
+            <p class="terminal-text color-muted mb-3">
               <span id="pst-time-display" class="time-badge"></span>
               // Currently based in California, always eager to explore global
               opportunities!
             </p>
 
-            <div class="time-simulator mt-2 mb-3 accent-bordered-left">
+            <div
+              class="time-simulator mt-2 mb-3 themed-simulator"
+              style="--theme-color: var(--color-yellow)"
+            >
               <label for="time-slider" class="terminal-text"
                 >// TIME_SIMULATOR</label
               >
@@ -741,16 +974,48 @@
                   max="23"
                   step="1"
                   value="12"
-                  class="flex-grow accent-cyan cursor-pointer"
+                  class="flex-grow cursor-pointer"
                 />
-                <span
-                  id="slider-time-display"
-                  class="color-cyan font-fira min-w-50"
+                <span id="slider-time-display" class="font-fira min-w-50"
                   >12:00</span
                 >
               </div>
               <p class="fs-0-8 color-muted mt-0-5">
                 Drag to preview different times of day. Reverts to real time
+                automatically after 5s.
+              </p>
+            </div>
+
+            <div
+              class="time-simulator mb-3 themed-simulator"
+              style="--theme-color: var(--color-violet)"
+            >
+              <label for="moon-slider" class="terminal-text"
+                >// LUNAR_SIMULATOR
+                <span
+                  id="slider-moon-name"
+                  class="fs-0-9"
+                  style="margin-left: 10px; opacity: 0.8"
+                ></span
+              ></label>
+              <div class="time-simulator-ctrl">
+                <input
+                  type="range"
+                  id="moon-slider"
+                  min="0"
+                  max="29.53"
+                  step="0.01"
+                  value="15"
+                  class="flex-grow cursor-pointer"
+                />
+                <span
+                  id="slider-moon-display"
+                  class="font-fira flex-center align-center min-w-50"
+                >
+                </span>
+              </div>
+              <p class="fs-0-8 color-muted mt-0-5">
+                Drag to preview the 29.5-day lunar cycle. Reverts to live phase
                 automatically after 5s.
               </p>
             </div>
@@ -765,7 +1030,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/social/gmail-logo.svg"
+                    src="assets/icons/connect-profiles/gmail-logo.svg"
                     class="node-icon"
                     alt="Gmail Logo"
                   />
@@ -780,7 +1045,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/social/linkedin-logo.svg"
+                    src="assets/icons/connect-profiles/linkedin-logo.svg"
                     class="node-icon"
                     alt="LinkedIn Logo"
                   />
@@ -801,7 +1066,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/social/leetcode-logo.svg"
+                    src="assets/icons/connect-profiles/leetcode-logo.svg"
                     class="node-icon"
                     alt="LeetCode Logo"
                   />
@@ -816,7 +1081,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/social/codewars-logo.svg"
+                    src="assets/icons/connect-profiles/codewars-logo.svg"
                     class="node-icon"
                     alt="CodeWars Logo"
                   />
@@ -831,7 +1096,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="assets/icons/social/monkeytype-logo.svg"
+                    src="assets/icons/connect-profiles/monkeytype-logo.svg"
                     class="node-icon"
                     alt="MonkeyType Logo"
                   />

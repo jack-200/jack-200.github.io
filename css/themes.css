@@ -1,12 +1,11 @@
 body.bg-about {
   --theme-base-bg: #020205;
 }
+
 body.bg-skills {
   --theme-base-bg: #000000;
 }
-body.bg-projects {
-  --theme-base-bg: #1a1a0b;
-}
+
 body.bg-sunny .stars,
 body.bg-evening .stars,
 body.bg-dark .stars,
@@ -29,6 +28,7 @@ body.bg-skills #shooting-stars-container {
     opacity 1s ease,
     visibility 1s ease;
 }
+
 .sky-scenery {
   position: fixed;
   top: 0;
@@ -42,6 +42,7 @@ body.bg-skills #shooting-stars-container {
   background: linear-gradient(to bottom, #74ebd5, #9face6);
   overflow: hidden;
 }
+
 .city-skyline {
   position: fixed;
   bottom: 0;
@@ -59,6 +60,7 @@ body.bg-skills #shooting-stars-container {
   background-position: bottom center;
   background-repeat: no-repeat;
 }
+
 body.bg-sunny .sky-scenery,
 body.bg-evening .sky-scenery,
 body.bg-dark .sky-scenery,
@@ -68,6 +70,7 @@ body.bg-dark .city-skyline {
   opacity: 1;
   visibility: visible;
 }
+
 .celestial-body {
   position: absolute;
   width: 150px;
@@ -75,6 +78,7 @@ body.bg-dark .city-skyline {
   border-radius: 50%;
   transition: all 1.5s ease-in-out;
 }
+
 .celestial-body::before {
   content: "";
   position: absolute;
@@ -88,6 +92,7 @@ body.bg-dark .city-skyline {
   transition: opacity 1.5s ease;
   animation: spin-rays 30s linear infinite;
 }
+
 .clouds {
   position: absolute;
   width: 200px;
@@ -99,6 +104,7 @@ body.bg-dark .city-skyline {
   animation: float-clouds 40s linear infinite;
   transition: all 1.5s ease;
 }
+
 .clouds::before,
 .clouds::after {
   content: "";
@@ -106,30 +112,36 @@ body.bg-dark .city-skyline {
   background: white;
   border-radius: 50%;
 }
+
 .clouds::before {
   width: 100px;
   height: 100px;
   top: -50px;
   left: 20px;
 }
+
 .clouds::after {
   width: 80px;
   height: 80px;
   top: -30px;
   left: 90px;
 }
+
 .cloud-2 {
   top: 25%;
   transform: scale(0.6);
   opacity: 0.5;
   animation: float-clouds 60s linear infinite reverse;
 }
+
 body.bg-sunny .sky-scenery {
   background: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%);
 }
+
 body.bg-sunny .celestial-body {
   background: #ffde00;
 }
+
 body.bg-sunny .celestial-body::before {
   background: repeating-conic-gradient(
     from 0deg,
@@ -138,13 +150,16 @@ body.bg-sunny .celestial-body::before {
   );
   opacity: 1;
 }
+
 body.bg-evening .sky-scenery {
   background: linear-gradient(to bottom, #f6d365 0%, #fda085 50%, #f68084 100%);
 }
+
 body.bg-evening .celestial-body {
   background: #ff5e3a;
   transform: scale(0.85);
 }
+
 body.bg-evening .celestial-body::before {
   background: repeating-conic-gradient(
     from 0deg,
@@ -153,32 +168,40 @@ body.bg-evening .celestial-body::before {
   );
   opacity: 1;
 }
+
 body.bg-evening .clouds {
   background: #ffd1b3;
 }
+
 body.bg-evening .clouds::before,
 body.bg-evening .clouds::after {
   background: #ffd1b3;
 }
+
 body.bg-dark .sky-scenery {
   background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
 }
+
 body.bg-dark .celestial-body {
   background: transparent;
   box-shadow: inset -25px -15px 0 5px #e0e0e0;
   transform: scale(0.7) rotate(-20deg);
 }
+
 body.bg-dark .celestial-body::before {
   display: none;
 }
+
 body.bg-dark .clouds {
   background: #3a4b5c;
   opacity: 0.4;
 }
+
 body.bg-dark .clouds::before,
 body.bg-dark .clouds::after {
   background: #3a4b5c;
 }
+
 .stars-overlay {
   position: absolute;
   inset: 0;
@@ -188,6 +211,7 @@ body.bg-dark .clouds::after {
   opacity: 0;
   transition: opacity 2s ease;
 }
+
 body.bg-dark .stars-overlay {
   opacity: 1;
 }

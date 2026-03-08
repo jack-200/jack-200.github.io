@@ -1,0 +1,203 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 65 65"
+  role="img"
+  aria-label="Google Gemini"
+>
+  <title>Google Gemini</title>
+  <mask
+    id="gemini-mask"
+    style="mask-type: alpha"
+    maskUnits="userSpaceOnUse"
+    x="0"
+    y="0"
+    width="65"
+    height="65"
+  >
+    <path
+      d="M32.45 0c.68 0 1.27.47 1.44 1.13a38.9 38.9 0 0 0 2 5.9c2.15 5 5.1 9.38 8.85 13.13 3.75 3.75 8.13 6.7 13.13 8.85a38.98 38.98 0 0 0 5.9 2c.66.17 1.12.76 1.12 1.44 0 .68-.46 1.27-1.12 1.44a38.9 38.9 0 0 0-5.9 2c-5 2.15-9.38 5.1-13.13 8.85a38.93 38.93 0 0 0-8.85 13.13 38.97 38.97 0 0 0-2 5.91c-.17.66-.76 1.12-1.44 1.12-.68 0-1.27-.46-1.44-1.13a38.91 38.91 0 0 0-2-5.9c-2.15-5-5.1-9.38-8.85-13.13-3.75-3.75-8.13-6.7-13.13-8.85a38.97 38.97 0 0 0-5.9-2C.46 33.89 0 33.3 0 32.62c0-.68.47-1.27 1.13-1.44a38.9 38.9 0 0 0 5.9-2c5-2.15 9.38-5.1 13.13-8.85a38.93 38.93 0 0 0 8.85-13.13 38.97 38.97 0 0 0 2-5.91C31.18.46 31.77 0 32.45 0z"
+      fill="#000"
+    />
+    <path
+      d="M32.45 0c.68 0 1.27.47 1.44 1.13a38.9 38.9 0 0 0 2 5.9c2.15 5 5.1 9.38 8.85 13.13 3.75 3.75 8.13 6.7 13.13 8.85a38.98 38.98 0 0 0 5.9 2c.66.17 1.12.76 1.12 1.44 0 .68-.46 1.27-1.12 1.44a38.9 38.9 0 0 0-5.9 2c-5 2.15-9.38 5.1-13.13 8.85a38.93 38.93 0 0 0-8.85 13.13 38.97 38.97 0 0 0-2 5.91c-.17.66-.76 1.12-1.44 1.12-.68 0-1.27-.46-1.44-1.13a38.91 38.91 0 0 0-2-5.9c-2.15-5-5.1-9.38-8.85-13.13-3.75-3.75-8.13-6.7-13.13-8.85a38.97 38.97 0 0 0-5.9-2C.46 33.89 0 33.3 0 32.62c0-.68.47-1.27 1.13-1.44a38.9 38.9 0 0 0 5.9-2c5-2.15 9.38-5.1 13.13-8.85a38.93 38.93 0 0 0 8.85-13.13 38.97 38.97 0 0 0 2-5.91C31.18.46 31.77 0 32.45 0z"
+      fill="url(#gemini-grad)"
+    />
+  </mask>
+  <g mask="url(#gemini-mask)">
+    <g filter="url(#f0)">
+      <path
+        d="M-5.86 50.73c7.5 2.67 16.12-2.33 19.25-11.15 3.13-8.82-.4-18.13-7.9-20.8-7.5-2.66-16.12 2.33-19.25 11.15-3.13 8.82.4 18.13 7.9 20.8z"
+        fill="#FFE432"
+      />
+    </g>
+    <g filter="url(#f1)">
+      <path
+        d="M27.43 21.65c10.3 0 18.65-8.54 18.65-19.06 0-10.53-8.35-19.06-18.65-19.06s-18.65 8.53-18.65 19.06c0 10.53 8.35 19.06 18.65 19.06z"
+        fill="#FC413D"
+      />
+    </g>
+    <g filter="url(#f2)">
+      <path
+        d="M20.18 82.61c10.76-.53 18.92-12.24 18.24-26.17-.68-13.93-9.95-24.8-20.7-24.27-10.76.52-18.92 12.24-18.24 26.17.68 13.93 9.95 24.8 20.7 24.27z"
+        fill="#00B95C"
+      />
+    </g>
+    <g filter="url(#f4)">
+      <path
+        d="M30.95 74.18c9.02-5.48 11.43-17.97 5.39-27.9-6.04-9.92-18.24-13.52-27.26-8.04-9.01 5.49-11.43 17.98-5.39 27.9 6.04 9.93 18.24 13.53 27.26 8.04z"
+        fill="#00B95C"
+      />
+    </g>
+    <g filter="url(#f5)">
+      <path
+        d="M67.39 42.99c10.13 0 18.35-7.91 18.35-17.67s-8.22-17.66-18.35-17.66-18.34 7.91-18.34 17.66 8.21 17.67 18.34 17.67z"
+        fill="#3186FF"
+      />
+    </g>
+    <g filter="url(#f6)">
+      <path
+        d="M-13.06 40.94c9.33 7.1 22.96 4.87 30.44-4.97 7.48-9.84 5.99-23.57-3.34-30.66C4.7-1.79-8.92.44-16.4 10.28c-7.49 9.84-6 23.57 3.34 30.66z"
+        fill="#FBBC04"
+      />
+    </g>
+    <g filter="url(#f7)">
+      <path
+        d="M34.74 51.43c11.14 7.66 25.9 5.52 32.97-4.76 7.07-10.29 3.78-24.84-7.36-32.49-11.13-7.66-25.9-5.52-32.97 4.76-7.07 10.29-3.78 24.84 7.36 32.49z"
+        fill="#3186FF"
+      />
+    </g>
+    <g filter="url(#f8)">
+      <path
+        d="M54.98-2.34c2.84 3.86-.8 11.34-8.13 16.73-7.32 5.39-15.56 6.63-18.39 2.78-2.83-3.85.8-11.34 8.13-16.73 7.32-5.38 15.56-6.63 18.39-2.78z"
+        fill="#749BFF"
+      />
+    </g>
+    <g filter="url(#f9)">
+      <path
+        d="M31.73 16.1C43.05 5.6 46.94-8.63 40.4-15.67c-6.53-7.04-21-4.23-32.33 6.28-11.32 10.5-15.21 24.73-8.68 31.77 6.53 7.04 21 4.23 32.33-6.28z"
+        fill="#FC413D"
+      />
+    </g>
+    <g filter="url(#f10)">
+      <path
+        d="M8.51 53.84c6.73 4.82 14.46 5.55 17.26 1.64 2.8-3.92-.38-11-7.11-15.82-6.74-4.81-14.47-5.54-17.27-1.63-2.8 3.91.39 11 7.12 15.81z"
+        fill="#FFEE48"
+      />
+    </g>
+  </g>
+  <defs>
+    <filter
+      id="f0"
+      x="-19.8"
+      y="13.1"
+      width="39.3"
+      height="43.2"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="2.46" />
+    </filter>
+    <filter
+      id="f1"
+      x="-15"
+      y="-40.3"
+      width="84.9"
+      height="85.7"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="11.89" />
+    </filter>
+    <filter
+      id="f2"
+      x="-20.8"
+      y="11.9"
+      width="79.5"
+      height="90.9"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="10.11" />
+    </filter>
+    <filter
+      id="f4"
+      x="-19.8"
+      y="15.5"
+      width="79.7"
+      height="81.5"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="10.11" />
+    </filter>
+    <filter
+      id="f5"
+      x="29.8"
+      y="-11.6"
+      width="75.1"
+      height="73.8"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="9.6" />
+    </filter>
+    <filter
+      id="f6"
+      x="-38.6"
+      y="-16.3"
+      width="78.1"
+      height="78.8"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="8.7" />
+    </filter>
+    <filter
+      id="f7"
+      x="8.1"
+      y="-6"
+      width="78.9"
+      height="77.5"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="7.77" />
+    </filter>
+    <filter
+      id="f8"
+      x="13.6"
+      y="-18.5"
+      width="56.3"
+      height="51.8"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="6.96" />
+    </filter>
+    <filter
+      id="f9"
+      x="-15.5"
+      y="-31.3"
+      width="70.9"
+      height="69.3"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="5.88" />
+    </filter>
+    <filter
+      id="f10"
+      x="-14.2"
+      y="21"
+      width="55.5"
+      height="51.6"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="7.27" />
+    </filter>
+    <linearGradient
+      id="gemini-grad"
+      x1="18.45"
+      y1="43.42"
+      x2="52.15"
+      y2="15"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#4893FC" />
+      <stop offset=".27" stop-color="#4893FC" />
+      <stop offset=".78" stop-color="#969DFF" />
+      <stop offset="1" stop-color="#BD99FE" />
+    </linearGradient>
+  </defs>
+</svg>

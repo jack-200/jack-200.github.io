@@ -1,6 +1,16 @@
+import { updateGlobalBackgroundMoon } from "./moon.js";
+
 export let isSimulating = false;
 let simulatedHour = 12;
 let simulationResetTimeout = null;
+
+const SUNRISE_HOUR = 6;
+const SUNSET_HOUR = 18;
+const NIGHT_START_HOUR = 20;
+
+const HOURS_IN_DAY = 24;
+const MINUTES_IN_HOUR = 60;
+const SIMULATION_RESET_DELAY_MS = 5000;
 
 export function getPSTTime() {
   if (isSimulating) {
@@ -16,7 +26,7 @@ export function getPSTTime() {
   const pstPartsString = new Date().toLocaleString("en-US", pstLocaleOptions);
 
   const [hourString, minuteString] = pstPartsString.split(":");
-  const currentHour = parseInt(hourString, 10) % 24;
+  const currentHour = parseInt(hourString, 10) % HOURS_IN_DAY;
   const currentMinute = parseInt(minuteString, 10);
 
   return { hour: currentHour, minute: currentMinute };
@@ -30,20 +40,16 @@ export function getCurrentTimeTheme() {
 }
 
 function isDaytime(hour) {
-  return hour >= 6 && hour < 17;
+  return hour >= SUNRISE_HOUR && hour < SUNSET_HOUR;
 }
 
 function isEvening(hour) {
-  return hour >= 17 && hour < 20;
+  return hour >= SUNSET_HOUR && hour < NIGHT_START_HOUR;
 }
 
 export function formatTimeDisplay(hour) {
   return `${hour.toString().padStart(2, "0")}:00`;
 }
-
-const SUNRISE_HOUR = 6;
-const SUNSET_HOUR = 18;
-const NIGHT_START_HOUR = 20;
 
 export function updateCelestialPosition(hour, minute, instantaneous = false) {
   const celestial = document.querySelector(".celestial-body");
@@ -66,6 +72,12 @@ export function updateCelestialPosition(hour, minute, instantaneous = false) {
       "moon",
     );
   }
+
+  renderMoonBackgroundIfVisible(celestial);
+}
+
+function renderMoonBackgroundIfVisible(celestial) {
+  updateGlobalBackgroundMoon();
 }
 
 function setTransitionStyle(celestial, instantaneous) {
@@ -84,17 +96,18 @@ function isCelestialBodyHidden(hour) {
 }
 
 function calculateSunPosition(hour, minute) {
-  const dayMinutesElapsed = (hour - SUNRISE_HOUR) * 60 + minute;
-  const totalDaylightMinutes = (SUNSET_HOUR - SUNRISE_HOUR) * 60;
+  const dayMinutesElapsed = (hour - SUNRISE_HOUR) * MINUTES_IN_HOUR + minute;
+  const totalDaylightMinutes = (SUNSET_HOUR - SUNRISE_HOUR) * MINUTES_IN_HOUR;
   const sunProgress = dayMinutesElapsed / totalDaylightMinutes;
 
   return calculatePositionCoordinates(sunProgress, 70);
 }
 
 function calculateMoonPosition(hour, minute) {
-  const totalNightDurationHours = 24 - NIGHT_START_HOUR + SUNRISE_HOUR;
+  const totalNightDurationHours =
+    HOURS_IN_DAY - NIGHT_START_HOUR + SUNRISE_HOUR;
   const moonMinutesElapsed = getMoonMinutesElapsed(hour, minute);
-  const totalNightMinutes = totalNightDurationHours * 60;
+  const totalNightMinutes = totalNightDurationHours * MINUTES_IN_HOUR;
   const moonProgress = moonMinutesElapsed / totalNightMinutes;
 
   return calculatePositionCoordinates(moonProgress, 60);
@@ -102,9 +115,9 @@ function calculateMoonPosition(hour, minute) {
 
 function getMoonMinutesElapsed(hour, minute) {
   if (hour >= NIGHT_START_HOUR) {
-    return (hour - NIGHT_START_HOUR) * 60 + minute;
+    return (hour - NIGHT_START_HOUR) * MINUTES_IN_HOUR + minute;
   }
-  return (24 - NIGHT_START_HOUR + hour) * 60 + minute;
+  return (HOURS_IN_DAY - NIGHT_START_HOUR + hour) * MINUTES_IN_HOUR + minute;
 }
 
 function calculatePositionCoordinates(progress, arcHeightMultiplier) {
@@ -143,13 +156,17 @@ export function updatePSTTimeDisplay() {
 
   if (timeDisplay) {
     if (isSimulating) {
-      timeDisplay.innerHTML = `<span style="animation: blink 2s infinite;">SIMULATED</span>`;
+      timeDisplay.innerHTML = createSimulatedTimeHtml();
     } else {
       timeDisplay.textContent = getFormattedPSTTime();
     }
   }
 
   updateCelestialPosition(hour, minute, isSimulating);
+}
+
+function createSimulatedTimeHtml() {
+  return `<span style="animation: blink 2s infinite;">SIMULATED</span>`;
 }
 
 function getFormattedPSTTime() {
@@ -186,7 +203,7 @@ function attachSliderListener(slider, sliderDisplay) {
     clearTimeout(simulationResetTimeout);
     simulationResetTimeout = setTimeout(() => {
       resetSimulation();
-    }, 5000);
+    }, SIMULATION_RESET_DELAY_MS);
   });
 }
 

@@ -3,6 +3,7 @@ import { setupShootingStars } from "./modules/animations.js";
 import { setupTimeSimulator, updatePSTTimeDisplay } from "./modules/time.js";
 import { BouncingLogoContainer } from "./modules/bouncer.js";
 import { setupUnreliableImages } from "./modules/analytics.js";
+import { setupMoonSimulator } from "./modules/moon.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const BOUNCING_LOGO_CONTAINER_ID = "bouncing-logo-container";
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupTabSwitching();
     setupShootingStars();
     setupTimeSimulator();
+    setupMoonSimulator();
     setupBackgroundSkillAnimation();
     schedulePSTTimeUpdates();
     setupUnreliableImages();
