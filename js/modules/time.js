@@ -166,7 +166,7 @@ export function updatePSTTimeDisplay() {
 }
 
 function createSimulatedTimeHtml() {
-  return `<span style="animation: blink 2s infinite;">SIMULATED</span>`;
+  return '<span style="animation: blink 2s infinite;">SIMULATED</span>';
 }
 
 function getFormattedPSTTime() {

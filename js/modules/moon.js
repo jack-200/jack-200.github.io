@@ -52,14 +52,17 @@ export function getMoonPhaseDetails(phasePercent) {
   const phase = phasePercent % 1.0;
 
   if (isNewMoonDetail(phase)) return { name: "New Moon", icon: "🌑" };
-  if (isWaxingCrescentDetail(phase))
+  if (isWaxingCrescentDetail(phase)) {
     return { name: "Waxing Crescent", icon: "🌒" };
+  }
   if (isFirstQuarterDetail(phase)) return { name: "First Quarter", icon: "🌓" };
-  if (isWaxingGibbousDetail(phase))
+  if (isWaxingGibbousDetail(phase)) {
     return { name: "Waxing Gibbous", icon: "🌔" };
+  }
   if (isFullMoonDetail(phase)) return { name: "Full Moon", icon: "🌕" };
-  if (isWaningGibbousDetail(phase))
+  if (isWaningGibbousDetail(phase)) {
     return { name: "Waning Gibbous", icon: "🌖" };
+  }
   if (isLastQuarterDetail(phase)) return { name: "Last Quarter", icon: "🌗" };
   return { name: "Waning Crescent", icon: "🌘" };
 }
@@ -250,8 +253,8 @@ function renderIntermediatePhaseBackground(
 }
 
 function renderWaxingCrescentBackground(celestial, phasePercent, litColor) {
-  let progress = phasePercent / 0.25;
-  let insetX = -150 * progress * 0.5;
+  const progress = phasePercent / 0.25;
+  const insetX = -150 * progress * 0.5;
   celestial.style.background = "transparent";
   celestial.style.boxShadow = `inset ${insetX}px 0px 0 0px ${litColor}`;
 }
@@ -262,8 +265,8 @@ function renderWaxingGibbousBackground(
   litColor,
   unlitColor,
 ) {
-  let progress = (0.5 - phasePercent) / 0.25;
-  let insetX = 150 * progress * 0.5;
+  const progress = (0.5 - phasePercent) / 0.25;
+  const insetX = 150 * progress * 0.5;
   celestial.style.background = litColor;
   celestial.style.boxShadow = `inset ${insetX}px 0px 0 0px ${unlitColor}`;
 }
@@ -274,15 +277,15 @@ function renderWaningGibbousBackground(
   litColor,
   unlitColor,
 ) {
-  let progress = (phasePercent - 0.5) / 0.25;
-  let insetX = -150 * progress * 0.5;
+  const progress = (phasePercent - 0.5) / 0.25;
+  const insetX = -150 * progress * 0.5;
   celestial.style.background = litColor;
   celestial.style.boxShadow = `inset ${insetX}px 0px 0 0px ${unlitColor}`;
 }
 
 function renderWaningCrescentBackground(celestial, phasePercent, litColor) {
-  let progress = (1.0 - phasePercent) / 0.25;
-  let insetX = 150 * progress * 0.5;
+  const progress = (1.0 - phasePercent) / 0.25;
+  const insetX = 150 * progress * 0.5;
   celestial.style.background = "transparent";
   celestial.style.boxShadow = `inset ${insetX}px 0px 0 0px ${litColor}`;
 }

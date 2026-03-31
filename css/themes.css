@@ -55,7 +55,7 @@ body.bg-skills #shooting-stars-container {
   transition:
     opacity 1s ease-in-out,
     visibility 1s ease-in-out;
-  background-image: url("../assets/images/city-skyline.png");
+  background-image: url("../assets/images/city-skyline.webp");
   background-size: 100% 100%;
   background-position: bottom center;
   background-repeat: no-repeat;

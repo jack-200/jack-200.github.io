@@ -252,9 +252,28 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 850px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects-grid > .project-card:last-child:nth-child(odd) {
+  grid-column: 1 / span 2;
+  justify-self: center;
+  max-width: 580px;
+}
+
+@media (max-width: 850px) {
+  .projects-grid > .project-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    max-width: 100%;
+  }
 }
 
 .links-container {

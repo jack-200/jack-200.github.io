@@ -1,5 +1,21 @@
 # Jack Liang - Portfolio Website
 
-Welcome to the source code repository for my personal portfolio website.
+A terminal-inspired personal portfolio website built with **HTML**, **CSS**, and **JavaScript**.
 
-**Live Deployment:** [jack-200.github.io](https://jack-200.github.io/)
+## Live Demo
+
+[https://jack-200.github.io/](https://jack-200.github.io/)
+
+## Quick Start
+
+```bash
+# Serve the project locally on http://localhost:3000
+npx -y serve .
+```
+
+## Deployment Notes
+
+```bash
+# Push changes to the main branch to update the live site
+git push origin main
+```

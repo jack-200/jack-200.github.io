@@ -431,6 +431,7 @@
   font-size: 0.9rem;
   text-align: center;
   color: var(--text-muted);
+  margin: 3rem 0;
 }
 
 .section-heading {
