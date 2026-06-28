@@ -10,6 +10,7 @@ export class BouncingLogoContainer {
   createIcon(source, index) {
     const element = document.createElement("img");
     element.src = source;
+    element.alt = "";
     element.className = "bouncing-icon";
     element.style.position = "absolute";
     element.style.width = "60px";

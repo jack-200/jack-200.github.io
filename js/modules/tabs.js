@@ -29,9 +29,17 @@ export function setupTabSwitching() {
       resetSimulation();
     }
 
-    document.body.className = "";
-    if (targetId === "about-panel") {
-      document.body.classList.add("bg-about");
+    const THEME_CLASSES = [
+      "bg-background",
+      "bg-skills",
+      "bg-sunny",
+      "bg-evening",
+      "bg-dark",
+    ];
+    document.body.classList.remove(...THEME_CLASSES);
+
+    if (targetId === "background-panel") {
+      document.body.classList.add("bg-background");
     } else if (targetId === "skills-projects-panel") {
       document.body.classList.add("bg-skills");
     } else if (targetId === "profiles-panel") {
@@ -78,7 +86,7 @@ export function setupTabSwitching() {
     updateBouncingLogoState(targetId);
   }
 
-  document.body.classList.add("bg-about");
+  document.body.classList.add("bg-background");
   tabButtons.forEach((button) => {
     button.addEventListener("click", () => switchTab(button));
   });

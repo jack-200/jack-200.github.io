@@ -17,17 +17,21 @@ export function getPSTTime() {
     return { hour: simulatedHour, minute: 0 };
   }
 
-  const pstLocaleOptions = {
+  const formatter = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Los_Angeles",
     hour12: false,
     hour: "numeric",
     minute: "numeric",
-  };
-  const pstPartsString = new Date().toLocaleString("en-US", pstLocaleOptions);
+  });
+  const parts = formatter.formatToParts(new Date());
 
-  const [hourString, minuteString] = pstPartsString.split(":");
-  const currentHour = parseInt(hourString, 10) % HOURS_IN_DAY;
-  const currentMinute = parseInt(minuteString, 10);
+  const hourPart = parts.find((p) => p.type === "hour");
+  const minutePart = parts.find((p) => p.type === "minute");
+
+  const currentHour = hourPart
+    ? parseInt(hourPart.value, 10) % HOURS_IN_DAY
+    : 12;
+  const currentMinute = minutePart ? parseInt(minutePart.value, 10) : 0;
 
   return { hour: currentHour, minute: currentMinute };
 }

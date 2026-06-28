@@ -145,17 +145,27 @@
 }
 
 .project-card-content {
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 1rem;
+  gap: 0.6rem;
+}
+
+.project-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.project-card-header h3 {
+  font-size: 1.15rem !important;
 }
 
 .tech-module {
   background: rgba(0, 0, 0, 0.4);
   border: 1px dashed var(--text-muted);
-  padding: 0.8rem;
+  padding: 0.6rem;
   transition: all 0.3s ease;
   text-align: center;
 }
@@ -185,8 +195,10 @@
   color: var(--accent-color, var(--accent-neon));
   font-weight: bold;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   text-shadow: 0 0 8px var(--accent-color, rgba(255, 0, 255, 0.4));
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .badge-row-container {
@@ -296,9 +308,23 @@
 
 .credential-link {
   display: inline-block !important;
-  border: 1px solid rgba(0, 255, 204, 0.3) !important;
-  padding: 2px 8px !important;
-  border-radius: 4px !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
+  background: rgba(0, 255, 204, 0.05) !important;
+  border: 1px solid rgba(0, 255, 204, 0.4) !important;
+  color: var(--color-cyan) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+  transition: all 0.3s ease !important;
+}
+
+.credential-link:hover {
+  background: rgba(0, 255, 204, 0.15) !important;
+  border-color: var(--color-cyan) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.3) !important;
 }
 
 .education-container {
@@ -318,6 +344,77 @@
   transition: border-color 0.3s ease;
 }
 
+@media (max-width: 500px) {
+  .education-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+.education-item > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.education-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem 1rem;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.card-date-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px dashed
+    color-mix(
+      in srgb,
+      var(--brand-color, rgba(255, 255, 255, 0.4)) 20%,
+      transparent
+    );
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.card-date-badge::before {
+  content: "[ ";
+  color: var(--brand-color, var(--text-main));
+}
+.card-date-badge::after {
+  content: " ]";
+  color: var(--brand-color, var(--text-main));
+}
+
+@media (max-width: 850px) {
+  .education-title-row {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.4rem;
+  }
+}
+
+.logo-link {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
 .education-logo {
   width: 70px;
   height: 70px;
@@ -325,11 +422,11 @@
   object-fit: contain;
   background: white;
   padding: 2px;
+  flex-shrink: 0;
 }
 
 .education-title {
   color: var(--color-cyan);
-  margin-bottom: 0.25rem;
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -343,8 +440,9 @@
 
 .education-meta {
   color: var(--text-muted);
+  font-family: "Fira Code", monospace;
   font-size: 0.9rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0;
 }
 
 .dot {
@@ -445,7 +543,7 @@
   margin-bottom: 1.5rem;
 }
 
-.panel-content > .section-heading:first-child {
+.section-heading:first-of-type {
   margin-top: 0;
 }
 
@@ -522,4 +620,43 @@
   -webkit-text-fill-color: transparent;
   animation: brand-title-sweep 8s linear infinite;
   text-shadow: none !important;
+}
+
+.view-toggle-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+.sub-tab-button {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.sub-tab-button.active-sub-tab {
+  background-color: var(--accent-color);
+  color: var(--bg-base) !important;
+  box-shadow: 0 0 10px var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.fallback-text {
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  color: var(--color-green);
+  text-shadow: 0 0 5px rgba(57, 255, 20, 0.4);
+  padding: 0.8rem;
+  border: 1px dashed rgba(57, 255, 20, 0.25);
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.secondary-profile-metrics {
+  width: 100%;
 }

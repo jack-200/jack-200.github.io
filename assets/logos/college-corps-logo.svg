@@ -1,0 +1,54 @@
+<svg
+  width="300"
+  height="300"
+  viewBox="0 0 300 300"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect width="300" height="300" fill="#ffffff" />
+
+  <text
+    x="150"
+    y="65"
+    fill="#f27224"
+    font-family="'Inter', 'Arial Black', system-ui, sans-serif"
+    font-size="25"
+    font-weight="900"
+    letter-spacing="-0.8px"
+    textLength="260"
+    lengthAdjust="spacingAndGlyphs"
+    text-anchor="middle"
+  >
+    #CaliforniansForAll
+  </text>
+
+  <text
+    x="150"
+    y="158"
+    fill="#005aa9"
+    font-family="'Inter', 'Arial Black', system-ui, sans-serif"
+    font-size="74"
+    font-weight="900"
+    letter-spacing="-2px"
+    textLength="265"
+    lengthAdjust="spacingAndGlyphs"
+    text-anchor="middle"
+  >
+    College
+  </text>
+
+  <text
+    x="150"
+    y="238"
+    fill="#f27224"
+    font-family="'Inter', 'Arial Black', system-ui, sans-serif"
+    font-size="74"
+    font-weight="900"
+    letter-spacing="-2px"
+    textLength="215"
+    lengthAdjust="spacingAndGlyphs"
+    text-anchor="middle"
+  >
+    Corps
+  </text>
+</svg>

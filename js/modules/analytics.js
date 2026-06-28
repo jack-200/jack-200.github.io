@@ -1,13 +1,24 @@
 export function setupUnreliableImages() {
   const unreliableImages = document.querySelectorAll(".unreliable-img");
+  const isLocalhost =
+    location.hostname === "localhost" || location.hostname === "127.0.0.1";
 
   unreliableImages.forEach((img) => {
-    img.addEventListener("error", () => {
+    if (isLocalhost) {
       handleImageError(img);
-    });
+    } else {
+      const realSrc = img.getAttribute("data-src");
+      if (realSrc) {
+        img.src = realSrc;
+      }
 
-    if (img.complete && img.naturalHeight === 0) {
-      handleImageError(img);
+      img.addEventListener("error", () => {
+        handleImageError(img);
+      });
+
+      if (img.complete && img.naturalHeight === 0) {
+        handleImageError(img);
+      }
     }
   });
 

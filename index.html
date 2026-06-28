@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jack Liang - Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="assets/logos/terminal.svg" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/themes.css" />
 
     <meta name="title" content="Jack Liang - Portfolio" />
     <meta
@@ -98,14 +102,14 @@
         <nav class="nav-tabs" role="tablist" aria-label="Main Navigation">
           <button
             class="tab-button active-tab cyber-button"
-            data-target="about-panel"
+            data-target="background-panel"
             role="tab"
             aria-selected="true"
-            aria-controls="about-panel"
-            id="tab-about"
+            aria-controls="background-panel"
+            id="tab-background"
             style="--accent-color: var(--color-cyan)"
           >
-            [ ABOUT ]
+            [ BACKGROUND ]
           </button>
           <button
             class="tab-button cyber-button"
@@ -132,166 +136,261 @@
         </nav>
 
         <section
-          id="about-panel"
+          id="background-panel"
           class="panel tab-content active-panel"
           role="tabpanel"
-          aria-labelledby="tab-about"
+          aria-labelledby="tab-background"
         >
           <div class="panel-header">
-            <span class="panel-title">// ABOUT_ME</span>
+            <span class="panel-title">// BACKGROUND</span>
           </div>
           <div class="panel-content">
-            <span
+            <h2
               class="panel-title section-heading"
               style="--accent-color: var(--color-cyan)"
-              >// EXPERIENCE</span
             >
+              // EXPERIENCE
+            </h2>
             <div class="education-container">
-              <div class="education-item">
-                <img
-                  src="assets/logos/digital-nest-logo.svg"
-                  alt="Digital NEST logo"
-                  class="education-logo"
-                />
+              <div class="education-item" style="--brand-color: #00e5ff">
+                <a
+                  href="https://www.fenwick.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="logo-link"
+                >
+                  <img
+                    src="assets/logos/fenwick-logo.svg"
+                    alt="Fenwick & West logo"
+                    class="education-logo"
+                  />
+                </a>
                 <div>
-                  <h3
-                    class="education-title brand-title"
-                    style="--brand-color-1: #8cc63f; --brand-color-2: #1e5c2d"
-                  >
-                    Software Engineer Intern
-                  </h3>
-                  <p class="education-degree">Digital NEST · Part-time</p>
-                  <p class="education-meta">Sep 2025 - Present · 7 mos</p>
-                  <p class="education-meta">
-                    Gilroy, California, United States · On-site
-                  </p>
+                  <div class="education-title-row">
+                    <h3
+                      class="education-title brand-title"
+                      style="--brand-color-1: #3b82f6; --brand-color-2: #00e5ff"
+                    >
+                      Forward Deployed Operations Intern
+                    </h3>
+                    <span class="card-date-badge font-fira"
+                      >Jun 2026 - Present (1 mo)</span
+                    >
+                  </div>
+                  <p class="education-degree">Fenwick & West · Full-time</p>
+                  <p class="education-meta">San Francisco, CA · Hybrid</p>
                 </div>
               </div>
 
-              <div class="education-item">
-                <img
-                  src="assets/logos/college-corps-logo.webp"
-                  alt="College Corps logo"
-                  class="education-logo"
-                />
+              <div class="education-item" style="--brand-color: #8cc63f">
+                <a
+                  href="https://digitalnest.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="logo-link"
+                >
+                  <img
+                    src="assets/logos/digital-nest-logo.svg"
+                    alt="Digital NEST logo"
+                    class="education-logo"
+                  />
+                </a>
                 <div>
-                  <h3
-                    class="education-title brand-title"
-                    style="--brand-color-1: #0055a2; --brand-color-2: #e5a823"
-                  >
-                    SJSU College Corps Fellow
-                  </h3>
+                  <div class="education-title-row">
+                    <h3
+                      class="education-title brand-title"
+                      style="--brand-color-1: #8cc63f; --brand-color-2: #a3e635"
+                    >
+                      Associate Software Engineer
+                    </h3>
+                    <span class="card-date-badge font-fira"
+                      >Sep 2025 - Jun 2026 (10 mos)</span
+                    >
+                  </div>
+                  <p class="education-degree">Digital NEST · Part-time</p>
+                  <p class="education-meta">Gilroy, CA · On-site</p>
+                </div>
+              </div>
+
+              <div class="education-item" style="--brand-color: #e5a823">
+                <a
+                  href="https://www.sjsu.edu/ccll/programs/collegecorps/index.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="logo-link"
+                >
+                  <img
+                    src="assets/logos/college-corps-logo.svg"
+                    alt="College Corps logo"
+                    class="education-logo"
+                  />
+                </a>
+                <div>
+                  <div class="education-title-row">
+                    <h3
+                      class="education-title brand-title"
+                      style="--brand-color-1: #3b82f6; --brand-color-2: #e5a823"
+                    >
+                      SJSU College Corps Fellow
+                    </h3>
+                    <span class="card-date-badge font-fira"
+                      >Aug 2023 - May 2025 (2 Cohorts)</span
+                    >
+                  </div>
                   <p class="education-degree">
                     #CaliforniansForAll College Corps · Part-time
                   </p>
-                  <p class="education-meta">
-                    Aug 2023 - May 2025 · 1 yr 10 mos
-                  </p>
-                  <p class="education-meta">
-                    San Jose, California, United States · On-site
-                  </p>
+                  <p class="education-meta">San Jose, CA · On-site</p>
                 </div>
               </div>
             </div>
 
-            <span
+            <h2
               class="panel-title section-heading"
               style="--accent-color: var(--color-yellow)"
-              >// EDUCATION</span
             >
+              // EDUCATION
+            </h2>
             <div class="education-container">
-              <div class="education-item">
-                <img
-                  src="assets/logos/san-jose-state-university-logo.webp"
-                  alt="San José State University logo"
-                  class="education-logo"
-                />
+              <div class="education-item" style="--brand-color: #e5a823">
+                <a
+                  href="https://www.sjsu.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="logo-link"
+                >
+                  <img
+                    src="assets/logos/san-jose-state-university-logo.webp"
+                    alt="San José State University logo"
+                    class="education-logo"
+                  />
+                </a>
                 <div>
-                  <h3
-                    class="education-title brand-title"
-                    style="--brand-color-1: #0055a2; --brand-color-2: #e5a823"
-                  >
-                    San José State University
-                  </h3>
+                  <div class="education-title-row">
+                    <h3
+                      class="education-title brand-title"
+                      style="--brand-color-1: #3b82f6; --brand-color-2: #e5a823"
+                    >
+                      San José State University
+                    </h3>
+                    <span class="card-date-badge font-fira"
+                      >Aug 2025 - May 2027</span
+                    >
+                  </div>
                   <p class="education-degree">
                     Master of Science - MS, Software Engineering
                   </p>
-                  <p class="education-meta">Aug 2025 - May 2027</p>
                 </div>
               </div>
 
-              <div class="education-item">
-                <img
-                  src="assets/logos/san-jose-state-university-logo.webp"
-                  alt="San José State University logo"
-                  class="education-logo"
-                />
+              <div class="education-item" style="--brand-color: #e5a823">
+                <a
+                  href="https://www.sjsu.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="logo-link"
+                >
+                  <img
+                    src="assets/logos/san-jose-state-university-logo.webp"
+                    alt="San José State University logo"
+                    class="education-logo"
+                  />
+                </a>
                 <div>
-                  <h3
-                    class="education-title brand-title"
-                    style="--brand-color-1: #0055a2; --brand-color-2: #e5a823"
-                  >
-                    San José State University
-                  </h3>
+                  <div class="education-title-row">
+                    <h3
+                      class="education-title brand-title"
+                      style="--brand-color-1: #3b82f6; --brand-color-2: #e5a823"
+                    >
+                      San José State University
+                    </h3>
+                    <span class="card-date-badge font-fira"
+                      >Aug 2023 - May 2025</span
+                    >
+                  </div>
                   <p class="education-degree">
                     Bachelor of Science - BS, Computer Science
                   </p>
-                  <p class="education-meta">Aug 2023 - May 2025</p>
                 </div>
               </div>
 
-              <div class="education-item">
-                <img
-                  src="assets/logos/de-anza-college-logo.webp"
-                  alt="De Anza College logo"
-                  class="education-logo"
-                />
+              <div class="education-item" style="--brand-color: #ffd700">
+                <a
+                  href="https://www.deanza.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="logo-link"
+                >
+                  <img
+                    src="assets/logos/de-anza-college-logo.webp"
+                    alt="De Anza College logo"
+                    class="education-logo"
+                  />
+                </a>
                 <div>
-                  <h3
-                    class="education-title brand-title"
-                    style="--brand-color-1: #800000; --brand-color-2: #ffd700"
-                  >
-                    De Anza College
-                  </h3>
+                  <div class="education-title-row">
+                    <h3
+                      class="education-title brand-title"
+                      style="--brand-color-1: #f43f5e; --brand-color-2: #ffd700"
+                    >
+                      De Anza College
+                    </h3>
+                    <span class="card-date-badge font-fira"
+                      >Sep 2021 - Jun 2023</span
+                    >
+                  </div>
                   <p class="education-degree">
                     Associate of Science - AS, Computer Science
                   </p>
-                  <p class="education-meta">Sep 2021 - Jun 2023</p>
                 </div>
               </div>
             </div>
 
-            <span
+            <h2
               class="panel-title section-heading"
               style="--accent-color: var(--color-orange)"
-              >// CERTIFICATIONS</span
             >
+              // CERTIFICATIONS
+            </h2>
             <div class="education-container">
-              <div class="education-item">
-                <img
-                  src="assets/logos/aws-certification-logo.webp"
-                  alt="AWS Certified Cloud Practitioner"
-                  class="education-logo"
-                />
+              <div class="education-item" style="--brand-color: #ff9900">
+                <a
+                  href="https://aws.amazon.com/certification/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="logo-link"
+                >
+                  <img
+                    src="assets/logos/aws-certification-logo.webp"
+                    alt="AWS Certified Cloud Practitioner logo"
+                    class="education-logo"
+                  />
+                </a>
                 <div>
-                  <h3
-                    class="education-title brand-title"
-                    style="--brand-color-1: #ff9900; --brand-color-2: #232f3e"
-                  >
-                    AWS Certified Cloud Practitioner
-                  </h3>
-                  <p class="education-degree">Amazon Web Services (AWS)</p>
-                  <p class="education-meta">
-                    Issued Apr 2025 · Expires Apr 2028
-                  </p>
-                  <a
-                    href="https://www.credly.com/badges/fe788e31-38b3-4c72-a076-8226af1b86da/linked_in_profile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="credential-link color-cyan fs-0-8 mt-0-5 block decoration-none transition-all hover-border-cyan"
-                  >
-                    [ VIEW_CREDENTIAL ]
-                  </a>
+                  <div class="education-title-row">
+                    <h3
+                      class="education-title brand-title"
+                      style="--brand-color-1: #ff9900; --brand-color-2: #ffcc00"
+                    >
+                      AWS Certified Cloud Practitioner
+                    </h3>
+                    <span class="card-date-badge font-fira"
+                      >Issued Apr 2025 - Expires Apr 2028</span
+                    >
+                  </div>
+                  <div class="flex-center-gap-1 flex-wrap">
+                    <p class="education-degree m-0">
+                      Amazon Web Services (AWS)
+                    </p>
+                    <a
+                      href="https://www.credly.com/badges/fe788e31-38b3-4c72-a076-8226af1b86da"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="credential-link color-cyan fs-0-75 decoration-none transition-all hover-border-cyan"
+                    >
+                      [ VIEW_CREDENTIAL ]
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -308,13 +407,13 @@
             <span class="panel-title">// SKILLS_AND_PROJECTS</span>
           </div>
           <div class="panel-content">
-            <span
+            <h2
               class="panel-title section-heading section-heading-centered"
               style="--accent-color: var(--color-cyan)"
-              >// SKILLS</span
             >
+              // SKILLS
+            </h2>
             <div class="skills-grid mb-3">
-              <!-- Programming Languages -->
               <div
                 class="skill-category tech-module parent-accent-dynamic-color-state"
                 style="
@@ -410,6 +509,17 @@
                       alt="Lua"
                     />Lua</span
                   >
+                  <span
+                    class="skill-tag"
+                    style="
+                      --brand-color: #76b900;
+                      --brand-color-rgb: 118, 185, 0;
+                    "
+                    ><img
+                      src="assets/icons/programming-languages/cuda-logo.svg"
+                      alt="CUDA"
+                    />CUDA</span
+                  >
                 </div>
 
                 <div class="sub-category-label mt-1-5">
@@ -452,7 +562,6 @@
                 </div>
               </div>
 
-              <!-- Frontend Development -->
               <div
                 class="skill-category tech-module parent-accent-dynamic-color-state"
                 style="
@@ -525,7 +634,6 @@
                 </div>
               </div>
 
-              <!-- Backend & Generative AI -->
               <div
                 class="skill-category tech-module parent-accent-dynamic-color-state"
                 style="
@@ -598,7 +706,6 @@
                 </div>
               </div>
 
-              <!-- Cloud & DevOps -->
               <div
                 class="skill-category tech-module parent-accent-dynamic-color-state"
                 style="
@@ -719,11 +826,12 @@
             </div>
 
             <div class="projects-section">
-              <span
+              <h2
                 class="panel-title section-heading section-heading-centered"
                 style="--accent-color: var(--color-pink)"
-                >// FEATURED_PROJECTS</span
               >
+                // FEATURED_PROJECTS
+              </h2>
 
               <div class="projects-grid">
                 <div class="project-card">
@@ -735,42 +843,44 @@
                     />
                   </div>
                   <div class="project-card-content">
-                    <h3 class="font-fira color-cyan m-0 fs-1-5">
-                      PDF & Image Tools GUI
-                    </h3>
-                    <div class="badge-row-container mt-0-5">
-                      <span
-                        class="project-tag"
-                        style="
-                          --brand-color: #3776ab;
-                          --brand-color-rgb: 55, 118, 171;
-                        "
-                        ><img
-                          src="assets/icons/programming-languages/python-logo.svg"
-                          alt="Python Logo"
-                        />Python</span
-                      >
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/programming-languages/python-logo.svg"
-                          alt="PyQt5 Logo"
-                        />PyQt5</span
-                      >
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/programming-languages/python-logo.svg"
-                          alt="uv Logo"
-                        />uv</span
-                      >
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/programming-languages/python-logo.svg"
-                          alt="Pillow Logo"
-                        />Pillow</span
-                      >
+                    <div class="project-card-header">
+                      <h3 class="font-fira color-cyan m-0 fs-1-5">
+                        PDF & Image Tools GUI
+                      </h3>
+                      <div class="badge-row-container">
+                        <span
+                          class="project-tag"
+                          style="
+                            --brand-color: #3776ab;
+                            --brand-color-rgb: 55, 118, 171;
+                          "
+                          ><img
+                            src="assets/icons/programming-languages/python-logo.svg"
+                            alt="Python Logo"
+                          />Python</span
+                        >
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/programming-languages/python-logo.svg"
+                            alt="PyQt5 Logo"
+                          />PyQt5</span
+                        >
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/programming-languages/python-logo.svg"
+                            alt="uv Logo"
+                          />uv</span
+                        >
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/programming-languages/python-logo.svg"
+                            alt="Pillow Logo"
+                          />Pillow</span
+                        >
+                      </div>
                     </div>
 
-                    <p class="color-main fs-1 lh-1-5 flex-grow">
+                    <p class="color-main fs-0-9 lh-1-5 flex-grow">
                       A comprehensive desktop application for manipulating PDFs
                       and images natively with advanced merging and conversion
                       capabilities.
@@ -800,36 +910,38 @@
                   <div class="project-cover-container">
                     <div class="w-100 h-100 flex-center bg-synthetic-cover">
                       <span class="color-pink fs-2 font-fira shadow-pink"
-                        >> SYSTEM.OS</span
+                        >&gt; SYSTEM.OS</span
                       >
                     </div>
                   </div>
                   <div class="project-card-content">
-                    <h3 class="font-fira color-pink m-0 fs-1-5">
-                      Terminal OS Portfolio
-                    </h3>
-                    <div class="badge-row-container mt-0-5">
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/programming-languages/javascript-logo.svg"
-                          alt="JavaScript Logo"
-                        />JavaScript</span
-                      >
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/frontend-development/css3-logo.svg"
-                          alt="CSS3 Logo"
-                        />CSS3</span
-                      >
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/frontend-development/html5-logo.svg"
-                          alt="HTML5 Logo"
-                        />HTML5</span
-                      >
+                    <div class="project-card-header">
+                      <h3 class="font-fira color-pink m-0 fs-1-5">
+                        Terminal OS Portfolio
+                      </h3>
+                      <div class="badge-row-container">
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/programming-languages/javascript-logo.svg"
+                            alt="JavaScript Logo"
+                          />JavaScript</span
+                        >
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/frontend-development/css3-logo.svg"
+                            alt="CSS3 Logo"
+                          />CSS3</span
+                        >
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/frontend-development/html5-logo.svg"
+                            alt="HTML5 Logo"
+                          />HTML5</span
+                        >
+                      </div>
                     </div>
 
-                    <p class="color-main fs-1 lh-1-5 flex-grow">
+                    <p class="color-main fs-0-9 lh-1-5 flex-grow">
                       An interactive portfolio built with Vanilla JS and CSS,
                       featuring custom animations and a terminal-inspired
                       design.
@@ -864,37 +976,39 @@
                     />
                   </div>
                   <div class="project-card-content">
-                    <h3 class="font-fira color-cyan m-0 fs-1-5">
-                      Prism Physics Playground
-                    </h3>
-                    <div class="badge-row-container mt-0-5">
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/frontend-development/react-logo.svg"
-                          alt="React Logo"
-                        />React</span
-                      >
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/programming-languages/typescript-logo.svg"
-                          alt="TypeScript Logo"
-                        />TypeScript</span
-                      >
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/frontend-development/vite-logo.svg"
-                          alt="Vite Logo"
-                        />Vite</span
-                      >
-                      <span class="project-tag"
-                        ><img
-                          src="assets/icons/frontend-development/html5-logo.svg"
-                          alt="Three.js Logo"
-                        />Three.js</span
-                      >
+                    <div class="project-card-header">
+                      <h3 class="font-fira color-cyan m-0 fs-1-5">
+                        Prism Physics Playground
+                      </h3>
+                      <div class="badge-row-container">
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/frontend-development/react-logo.svg"
+                            alt="React Logo"
+                          />React</span
+                        >
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/programming-languages/typescript-logo.svg"
+                            alt="TypeScript Logo"
+                          />TypeScript</span
+                        >
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/frontend-development/vite-logo.svg"
+                            alt="Vite Logo"
+                          />Vite</span
+                        >
+                        <span class="project-tag"
+                          ><img
+                            src="assets/icons/frontend-development/html5-logo.svg"
+                            alt="Three.js Logo"
+                          />Three.js</span
+                        >
+                      </div>
                     </div>
 
-                    <p class="color-main fs-1 lh-1-5 flex-grow">
+                    <p class="color-main fs-0-9 lh-1-5 flex-grow">
                       An interactive 3D physics simulator built with React,
                       Three.js, and Rapier, featuring real-time collision
                       detection and dynamic object spawning.
@@ -952,57 +1066,72 @@
               <div
                 class="github-stats flex-col-center-gap-2 bordered-panel-inner mt-2"
               >
-                <span
+                <h2
                   class="panel-title section-heading section-heading-centered"
                   style="--accent-color: var(--color-green)"
-                  >// GITHUB_ANALYTICS</span
                 >
+                  // GITHUB_ANALYTICS
+                </h2>
 
                 <img
-                  class="activity-heatmap"
-                  src="assets/github-stats/activity-heatmap.svg"
+                  class="activity-heatmap unreliable-img"
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'></svg>"
+                  data-src="assets/github-stats/activity-heatmap.svg"
                   alt="GitHub Contribution Graph"
+                  data-fallback-text="GitHub Contribution Graph"
                 />
 
                 <img
-                  class="contribution-streaks"
-                  src="assets/github-stats/contribution-streaks.svg"
+                  class="contribution-streaks unreliable-img"
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'></svg>"
+                  data-src="assets/github-stats/contribution-streaks.svg"
                   alt="GitHub Contribution Streaks"
+                  data-fallback-text="GitHub Contribution Streaks"
                 />
 
                 <img
-                  class="detailed-global-stats"
-                  src="assets/github-stats/detailed-global-stats.svg"
+                  class="detailed-global-stats unreliable-img"
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'></svg>"
+                  data-src="assets/github-stats/detailed-global-stats.svg"
                   alt="GitHub Profile Statistics"
+                  data-fallback-text="GitHub Profile Statistics"
                 />
 
                 <img
-                  class="detailed-language-breakdown"
-                  src="assets/github-stats/detailed-language-breakdown.svg"
+                  class="detailed-language-breakdown unreliable-img"
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'></svg>"
+                  data-src="assets/github-stats/detailed-language-breakdown.svg"
                   alt="GitHub Language Breakdown"
+                  data-fallback-text="GitHub Language Breakdown"
                 />
 
                 <img
-                  class="productive-time-breakdown"
-                  src="assets/github-stats/productive-time-breakdown.svg"
+                  class="productive-time-breakdown unreliable-img"
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'></svg>"
+                  data-src="assets/github-stats/productive-time-breakdown.svg"
                   alt="GitHub Productive Time Distribution"
+                  data-fallback-text="GitHub Productive Time Distribution"
                 />
 
                 <img
-                  class="github-profile-details"
-                  src="assets/github-stats/github-profile-details.svg"
+                  class="github-profile-details unreliable-img"
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'></svg>"
+                  data-src="assets/github-stats/github-profile-details.svg"
                   alt="GitHub Organization Profile"
+                  data-fallback-text="GitHub Organization Profile"
                 />
 
                 <div class="secondary-profile-metrics flex-col-center-gap-2">
                   <img
-                    src="assets/github-stats/github-profile-trophies.svg"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'></svg>"
+                    data-src="assets/github-stats/github-profile-trophies.svg"
                     alt="GitHub Achievement Trophies"
                     class="unreliable-img"
                     data-fallback-text="GitHub Achievement Trophies"
                   />
                   <img
-                    src="assets/github-stats/github-stats-summary.svg"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'></svg>"
+                    data-src="assets/github-stats/github-stats-summary.svg"
                     alt="GitHub Repository Overview"
                     class="unreliable-img"
                     data-fallback-text="GitHub Repository Overview"
@@ -1029,7 +1158,7 @@
           </div>
           <div class="panel-content">
             <p class="terminal-text color-muted mb-3">
-              <span id="pst-time-display" class="time-badge"></span>
+              <span id="pst-time-display" class="time-badge">--:-- -- PST</span>
               // Currently based in California, always eager to explore global
               opportunities!
             </p>
@@ -1071,8 +1200,9 @@
                   id="slider-moon-name"
                   class="fs-0-9"
                   style="margin-left: 10px; opacity: 0.8"
-                ></span
-              ></label>
+                  >- Loading...</span
+                ></label
+              >
               <div class="time-simulator-ctrl">
                 <input
                   type="range"
@@ -1086,8 +1216,8 @@
                 <span
                   id="slider-moon-display"
                   class="font-fira flex-center align-center min-w-50"
+                  >🌑</span
                 >
-                </span>
               </div>
               <p class="fs-0-8 color-muted mt-0-5">
                 Drag to preview the 29.5-day lunar cycle. Reverts to live phase
@@ -1112,7 +1242,7 @@
                   GMAIL
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/jack-liang-82a0ba237/"
+                  href="https://www.linkedin.com/in/jack-liang-dev/"
                   aria-label="View Jack's LinkedIn Profile"
                   class="cyber-button btn-linkedin justify-center"
                   style="--accent-color: #0077b5"

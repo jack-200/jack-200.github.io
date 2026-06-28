@@ -1,0 +1,30 @@
+<svg
+  width="300"
+  height="300"
+  viewBox="0 0 300 300"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id="fenwickGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#fenwickGrad)" />
+  <text
+    x="150"
+    y="156"
+    fill="#ffffff"
+    font-family="'Montserrat', 'Futura', 'Arial Black', system-ui, sans-serif"
+    font-size="56"
+    font-weight="900"
+    letter-spacing="-0.5px"
+    textLength="265"
+    lengthAdjust="spacingAndGlyphs"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    FENWICK
+  </text>
+</svg>
